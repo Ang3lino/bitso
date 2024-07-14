@@ -1,0 +1,25 @@
+altgraph @ file:///AppleInternal/Library/BuildRoots/860631e9-c1c5-11ee-98ee-b6ef2fd8d87b/Library/Caches/com.apple.xbs/Sources/python3/altgraph-0.17.2-py2.py3-none-any.whl
+beautifulsoup4==4.12.3
+bitso-py==3.0.1
+certifi==2024.7.4
+charset-normalizer==3.3.2
+defusedxml==0.7.1
+future @ file:///AppleInternal/Library/BuildRoots/860631e9-c1c5-11ee-98ee-b6ef2fd8d87b/Library/Caches/com.apple.xbs/Sources/python3/future-0.18.2-py3-none-any.whl
+httpie==3.2.3
+idna==3.7
+macholib @ file:///AppleInternal/Library/BuildRoots/860631e9-c1c5-11ee-98ee-b6ef2fd8d87b/Library/Caches/com.apple.xbs/Sources/python3/macholib-1.15.2-py2.py3-none-any.whl
+markdown-it-py==3.0.0
+mdurl==0.1.2
+mock==5.1.0
+multidict==6.0.5
+Pygments==2.18.0
+PySocks==1.7.1
+python-dateutil==2.9.0.post0
+requests==2.31.0
+requests-toolbelt==1.0.0
+rich==13.7.1
+six @ file:///AppleInternal/Library/BuildRoots/860631e9-c1c5-11ee-98ee-b6ef2fd8d87b/Library/Caches/com.apple.xbs/Sources/python3/six-1.15.0-py2.py3-none-any.whl
+soupsieve==2.5
+tqdm==4.66.4
+urllib3==2.2.2
+websocket-client==0.40.0
