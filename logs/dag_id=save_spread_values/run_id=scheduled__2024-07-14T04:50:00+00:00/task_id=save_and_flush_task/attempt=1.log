@@ -1,0 +1,38 @@
+[2024-07-14T09:05:27.896+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-14T09:05:27.941+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: save_spread_values.save_and_flush_task scheduled__2024-07-14T04:50:00+00:00 [queued]>
+[2024-07-14T09:05:27.963+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: save_spread_values.save_and_flush_task scheduled__2024-07-14T04:50:00+00:00 [queued]>
+[2024-07-14T09:05:27.968+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-14T09:05:27.986+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): save_and_flush_task> on 2024-07-14 04:50:00+00:00
+[2024-07-14T09:05:27.994+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3566) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-14T09:05:27.996+0000] {standard_task_runner.py:63} INFO - Started process 3593 to run task
+[2024-07-14T09:05:27.995+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'save_spread_values', 'save_and_flush_task', 'scheduled__2024-07-14T04:50:00+00:00', '--job-id', '1148', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpvg39ce44']
+[2024-07-14T09:05:27.998+0000] {standard_task_runner.py:91} INFO - Job 1148: Subtask save_and_flush_task
+[2024-07-14T09:05:28.037+0000] {task_command.py:426} INFO - Running <TaskInstance: save_spread_values.save_and_flush_task scheduled__2024-07-14T04:50:00+00:00 [running]> on host d537c34a4880
+[2024-07-14T09:05:28.111+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='save_spread_values' AIRFLOW_CTX_TASK_ID='save_and_flush_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-14T04:50:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-14T04:50:00+00:00'
+[2024-07-14T09:05:28.115+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-14T09:05:28.117+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-14T09:05:28.117+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-14T09:05:28.129+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=save_spread_values, task_id=save_and_flush_task, run_id=scheduled__2024-07-14T04:50:00+00:00, execution_date=20240714T045000, start_date=20240714T090527, end_date=20240714T090528
+[2024-07-14T09:05:28.141+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-14T09:05:28.155+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-14T09:05:28.156+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-07-14T20:34:46.398+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-14T20:34:46.439+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: save_spread_values.save_and_flush_task scheduled__2024-07-14T04:50:00+00:00 [queued]>
+[2024-07-14T20:34:46.445+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: save_spread_values.save_and_flush_task scheduled__2024-07-14T04:50:00+00:00 [queued]>
+[2024-07-14T20:34:46.447+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-14T20:34:46.459+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): save_and_flush_task> on 2024-07-14 04:50:00+00:00
+[2024-07-14T20:34:46.464+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1765) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-14T20:34:46.465+0000] {standard_task_runner.py:63} INFO - Started process 1769 to run task
+[2024-07-14T20:34:46.464+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'save_spread_values', 'save_and_flush_task', 'scheduled__2024-07-14T04:50:00+00:00', '--job-id', '782', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpg7gprcyq']
+[2024-07-14T20:34:46.467+0000] {standard_task_runner.py:91} INFO - Job 782: Subtask save_and_flush_task
+[2024-07-14T20:34:46.518+0000] {task_command.py:426} INFO - Running <TaskInstance: save_spread_values.save_and_flush_task scheduled__2024-07-14T04:50:00+00:00 [running]> on host 77caf7e4b282
+[2024-07-14T20:34:46.579+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='save_spread_values' AIRFLOW_CTX_TASK_ID='save_and_flush_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-14T04:50:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-14T04:50:00+00:00'
+[2024-07-14T20:34:46.580+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-14T20:34:46.587+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-14T20:34:46.588+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-14T20:34:46.593+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=save_spread_values, task_id=save_and_flush_task, run_id=scheduled__2024-07-14T04:50:00+00:00, execution_date=20240714T045000, start_date=20240714T203446, end_date=20240714T203446
+[2024-07-14T20:34:46.608+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-14T20:34:46.618+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-14T20:34:46.619+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
