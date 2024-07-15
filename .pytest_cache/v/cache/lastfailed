@@ -1,0 +1,4 @@
+{
+  "dags/test_dag.py": true,
+  "test/test.py::test_save_to_partitioned_directory": true
+}

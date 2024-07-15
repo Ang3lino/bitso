@@ -1,0 +1,6 @@
+[
+  "test/test.py::test_compute_spread",
+  "test/test.py::test_fetch_ticker_data",
+  "test/test.py::test_prepare_dir",
+  "test/test.py::test_save_to_partitioned_directory"
+]
