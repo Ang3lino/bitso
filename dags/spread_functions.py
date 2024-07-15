@@ -43,6 +43,7 @@ def prepare_dir(record, base_path):
 def save_to_partitioned_directory(records, base_path):
     for record in tqdm(records):
         file_path, file_exists = prepare_dir(record, base_path)
+        print(f'saved in {file_path}')
         with open(file_path, 'a', newline='', encoding='utf-8') as csvfile:
             writer = csv.writer(csvfile, quoting=csv.QUOTE_MINIMAL, escapechar='\\')
             if not file_exists:

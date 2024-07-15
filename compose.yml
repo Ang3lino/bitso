@@ -1,5 +1,3 @@
-version: '3'
-
 x-spark-common: &spark-common
   image: bitnami/spark:latest
   volumes:
@@ -17,6 +15,9 @@ x-airflow-common: &airflow-common
     - ./jobs:/opt/airflow/jobs
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
+    - ./test:/opt/airflow/test
+    - ./server:/opt/airflow/server
+    - ./bucket:/opt/airflow/bucket
   depends_on:
     - postgres
   networks:
@@ -37,7 +38,8 @@ services:
     <<: *airflow-common
     command: webserver
     ports:
-      - "8080:8080"
+      - "8080:8080" # airflow web server
+      - "8000:8000"
     depends_on:
       - scheduler
 
