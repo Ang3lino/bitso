@@ -76,7 +76,6 @@ url = "http://127.0.0.1:8000/store_spread"
 headers = {
     "Content-Type": "application/json"
 }
-
 data = {
     "orderbook_timestamp": "2024-07-14T12:00:00+00:00",
     "book": "btc_mxn",

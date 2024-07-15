@@ -4,6 +4,7 @@ from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 
 import logging
+import requests
 
 
 default_args = {
@@ -13,9 +14,21 @@ default_args = {
 }
 
 def greet():
-    print('hello world')
-    logging.info('log de informacion')
-    print('uwu')
+    logging.info("fun started")
+    # url = "http://127.0.0.1:8000/store_spread"
+    url = "http://0.0.0.0:8000/store_spread"
+    headers = {
+        "Content-Type": "application/json"
+    }
+    data = {
+        "orderbook_timestamp": "2024-07-14T12:00:00+00:00",
+        "book": "btc_mxn",
+        "bid": 790000.00,
+        "ask": 800000.00,
+        "spread": 1.10
+    }
+    response = requests.post(url, headers=headers, json=data)
+    print(response)
 
 
 with DAG(
