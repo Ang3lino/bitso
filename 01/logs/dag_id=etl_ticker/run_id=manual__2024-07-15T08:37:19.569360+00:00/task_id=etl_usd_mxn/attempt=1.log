@@ -1,0 +1,143 @@
+[2024-07-15T08:37:20.532+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-15T08:37:20.555+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_ticker.etl_usd_mxn manual__2024-07-15T08:37:19.569360+00:00 [queued]>
+[2024-07-15T08:37:20.561+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_ticker.etl_usd_mxn manual__2024-07-15T08:37:19.569360+00:00 [queued]>
+[2024-07-15T08:37:20.561+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-15T08:37:20.568+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): etl_usd_mxn> on 2024-07-15 08:37:19.569360+00:00
+[2024-07-15T08:37:20.575+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=3031) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-15T08:37:20.574+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_ticker', 'etl_usd_mxn', 'manual__2024-07-15T08:37:19.569360+00:00', '--job-id', '236', '--raw', '--subdir', 'DAGS_FOLDER/et_dag.py', '--cfg-path', '/tmp/tmpdvf5pw06']
+[2024-07-15T08:37:20.576+0000] {standard_task_runner.py:63} INFO - Started process 3033 to run task
+[2024-07-15T08:37:20.576+0000] {standard_task_runner.py:91} INFO - Job 236: Subtask etl_usd_mxn
+[2024-07-15T08:37:20.619+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_ticker.etl_usd_mxn manual__2024-07-15T08:37:19.569360+00:00 [running]> on host 07ee111a4cec
+[2024-07-15T08:37:20.672+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_ticker' AIRFLOW_CTX_TASK_ID='etl_usd_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T08:37:19.569360+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-15T08:37:19.569360+00:00'
+[2024-07-15T08:37:20.673+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-15T08:37:20.687+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/60 [00:00<?, ?it/s]
+[2024-07-15T08:37:22.075+0000] {logging_mixin.py:188} WARNING -   2%|1         | 1/60 [00:01<01:21,  1.39s/it]
+[2024-07-15T08:37:23.241+0000] {logging_mixin.py:188} WARNING -   3%|3         | 2/60 [00:02<01:12,  1.26s/it]
+[2024-07-15T08:37:24.395+0000] {logging_mixin.py:188} WARNING -   5%|5         | 3/60 [00:03<01:08,  1.21s/it]
+[2024-07-15T08:37:25.549+0000] {logging_mixin.py:188} WARNING -   7%|6         | 4/60 [00:04<01:06,  1.19s/it]
+[2024-07-15T08:37:26.713+0000] {logging_mixin.py:188} WARNING -   8%|8         | 5/60 [00:06<01:04,  1.18s/it]
+[2024-07-15T08:37:27.889+0000] {logging_mixin.py:188} WARNING -  10%|#         | 6/60 [00:07<01:03,  1.18s/it]
+[2024-07-15T08:37:29.046+0000] {logging_mixin.py:188} WARNING -  12%|#1        | 7/60 [00:08<01:02,  1.17s/it]
+[2024-07-15T08:37:30.205+0000] {logging_mixin.py:188} WARNING -  13%|#3        | 8/60 [00:09<01:00,  1.17s/it]
+[2024-07-15T08:37:31.366+0000] {logging_mixin.py:188} WARNING -  15%|#5        | 9/60 [00:10<00:59,  1.17s/it]
+[2024-07-15T08:37:32.516+0000] {logging_mixin.py:188} WARNING -  17%|#6        | 10/60 [00:11<00:58,  1.16s/it]
+[2024-07-15T08:37:33.677+0000] {logging_mixin.py:188} WARNING -  18%|#8        | 11/60 [00:12<00:56,  1.16s/it]
+[2024-07-15T08:37:34.815+0000] {logging_mixin.py:188} WARNING -  20%|##        | 12/60 [00:14<00:55,  1.15s/it]
+[2024-07-15T08:37:35.983+0000] {logging_mixin.py:188} WARNING -  22%|##1       | 13/60 [00:15<00:54,  1.16s/it]
+[2024-07-15T08:37:37.155+0000] {logging_mixin.py:188} WARNING -  23%|##3       | 14/60 [00:16<00:53,  1.16s/it]
+[2024-07-15T08:37:38.324+0000] {logging_mixin.py:188} WARNING -  25%|##5       | 15/60 [00:17<00:52,  1.16s/it]
+[2024-07-15T08:37:39.476+0000] {logging_mixin.py:188} WARNING -  27%|##6       | 16/60 [00:18<00:51,  1.16s/it]
+[2024-07-15T08:37:40.620+0000] {logging_mixin.py:188} WARNING -  28%|##8       | 17/60 [00:19<00:49,  1.16s/it]
+[2024-07-15T08:37:41.781+0000] {logging_mixin.py:188} WARNING -  30%|###       | 18/60 [00:21<00:48,  1.16s/it]
+[2024-07-15T08:37:42.943+0000] {logging_mixin.py:188} WARNING -  32%|###1      | 19/60 [00:22<00:47,  1.16s/it]
+[2024-07-15T08:37:44.105+0000] {logging_mixin.py:188} WARNING -  33%|###3      | 20/60 [00:23<00:46,  1.16s/it]
+[2024-07-15T08:37:45.285+0000] {logging_mixin.py:188} WARNING -  35%|###5      | 21/60 [00:24<00:45,  1.17s/it]
+[2024-07-15T08:37:46.454+0000] {logging_mixin.py:188} WARNING -  37%|###6      | 22/60 [00:25<00:44,  1.17s/it]
+[2024-07-15T08:37:47.605+0000] {logging_mixin.py:188} WARNING -  38%|###8      | 23/60 [00:26<00:43,  1.16s/it]
+[2024-07-15T08:37:48.769+0000] {logging_mixin.py:188} WARNING -  40%|####      | 24/60 [00:28<00:41,  1.16s/it]
+[2024-07-15T08:37:49.921+0000] {logging_mixin.py:188} WARNING -  42%|####1     | 25/60 [00:29<00:40,  1.16s/it]
+[2024-07-15T08:37:51.094+0000] {logging_mixin.py:188} WARNING -  43%|####3     | 26/60 [00:30<00:39,  1.16s/it]
+[2024-07-15T08:37:52.268+0000] {logging_mixin.py:188} WARNING -  45%|####5     | 27/60 [00:31<00:38,  1.17s/it]
+[2024-07-15T08:37:53.445+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 28/60 [00:32<00:37,  1.17s/it]
+[2024-07-15T08:37:54.606+0000] {logging_mixin.py:188} WARNING -  48%|####8     | 29/60 [00:33<00:36,  1.17s/it]
+[2024-07-15T08:37:55.773+0000] {logging_mixin.py:188} WARNING -  50%|#####     | 30/60 [00:35<00:35,  1.17s/it]
+[2024-07-15T08:37:56.937+0000] {logging_mixin.py:188} WARNING -  52%|#####1    | 31/60 [00:36<00:33,  1.17s/it]
+[2024-07-15T08:37:58.123+0000] {logging_mixin.py:188} WARNING -  53%|#####3    | 32/60 [00:37<00:32,  1.17s/it]
+[2024-07-15T08:37:59.273+0000] {logging_mixin.py:188} WARNING -  55%|#####5    | 33/60 [00:38<00:31,  1.17s/it]
+[2024-07-15T08:38:00.432+0000] {logging_mixin.py:188} WARNING -  57%|#####6    | 34/60 [00:39<00:30,  1.16s/it]
+[2024-07-15T08:38:01.616+0000] {logging_mixin.py:188} WARNING -  58%|#####8    | 35/60 [00:40<00:29,  1.17s/it]
+[2024-07-15T08:38:02.766+0000] {logging_mixin.py:188} WARNING -  60%|######    | 36/60 [00:42<00:27,  1.16s/it]
+[2024-07-15T08:38:03.938+0000] {logging_mixin.py:188} WARNING -  62%|######1   | 37/60 [00:43<00:26,  1.17s/it]
+[2024-07-15T08:38:05.095+0000] {logging_mixin.py:188} WARNING -  63%|######3   | 38/60 [00:44<00:25,  1.16s/it]
+[2024-07-15T08:38:06.245+0000] {logging_mixin.py:188} WARNING -  65%|######5   | 39/60 [00:45<00:24,  1.16s/it]
+[2024-07-15T08:38:07.410+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 40/60 [00:46<00:23,  1.16s/it]
+[2024-07-15T08:38:08.584+0000] {logging_mixin.py:188} WARNING -  68%|######8   | 41/60 [00:47<00:22,  1.16s/it]
+[2024-07-15T08:38:09.744+0000] {logging_mixin.py:188} WARNING -  70%|#######   | 42/60 [00:49<00:20,  1.16s/it]
+[2024-07-15T08:38:10.896+0000] {logging_mixin.py:188} WARNING -  72%|#######1  | 43/60 [00:50<00:19,  1.16s/it]
+[2024-07-15T08:38:12.061+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 44/60 [00:51<00:18,  1.16s/it]
+[2024-07-15T08:38:13.248+0000] {logging_mixin.py:188} WARNING -  75%|#######5  | 45/60 [00:52<00:17,  1.17s/it]
+[2024-07-15T08:38:14.433+0000] {logging_mixin.py:188} WARNING -  77%|#######6  | 46/60 [00:53<00:16,  1.17s/it]
+[2024-07-15T08:38:15.595+0000] {logging_mixin.py:188} WARNING -  78%|#######8  | 47/60 [00:54<00:15,  1.17s/it]
+[2024-07-15T08:38:16.747+0000] {logging_mixin.py:188} WARNING -  80%|########  | 48/60 [00:56<00:13,  1.17s/it]
+[2024-07-15T08:38:17.900+0000] {logging_mixin.py:188} WARNING -  82%|########1 | 49/60 [00:57<00:12,  1.16s/it]
+[2024-07-15T08:38:19.055+0000] {logging_mixin.py:188} WARNING -  83%|########3 | 50/60 [00:58<00:11,  1.16s/it]
+[2024-07-15T08:38:20.209+0000] {logging_mixin.py:188} WARNING -  85%|########5 | 51/60 [00:59<00:10,  1.16s/it]
+[2024-07-15T08:38:21.381+0000] {logging_mixin.py:188} WARNING -  87%|########6 | 52/60 [01:00<00:09,  1.16s/it]
+[2024-07-15T08:38:22.575+0000] {logging_mixin.py:188} WARNING -  88%|########8 | 53/60 [01:01<00:08,  1.17s/it]
+[2024-07-15T08:38:23.739+0000] {logging_mixin.py:188} WARNING -  90%|######### | 54/60 [01:03<00:07,  1.17s/it]
+[2024-07-15T08:38:24.914+0000] {logging_mixin.py:188} WARNING -  92%|#########1| 55/60 [01:04<00:05,  1.17s/it]
+[2024-07-15T08:38:26.080+0000] {logging_mixin.py:188} WARNING -  93%|#########3| 56/60 [01:05<00:04,  1.17s/it]
+[2024-07-15T08:38:27.266+0000] {logging_mixin.py:188} WARNING -  95%|#########5| 57/60 [01:06<00:03,  1.17s/it]
+[2024-07-15T08:38:28.433+0000] {logging_mixin.py:188} WARNING -  97%|#########6| 58/60 [01:07<00:02,  1.17s/it]
+[2024-07-15T08:38:29.587+0000] {logging_mixin.py:188} WARNING -  98%|#########8| 59/60 [01:08<00:01,  1.17s/it]
+[2024-07-15T08:38:30.741+0000] {logging_mixin.py:188} WARNING - 100%|##########| 60/60 [01:10<00:00,  1.16s/it]
+[2024-07-15T08:38:30.748+0000] {logging_mixin.py:188} WARNING - 100%|##########| 60/60 [01:10<00:00,  1.17s/it]
+[2024-07-15T08:38:30.749+0000] {et_dag.py:47} INFO - Writting records gathered from 60 seconds.
+[2024-07-15T08:38:30.750+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/60 [00:00<?, ?it/s]
+[2024-07-15T08:38:30.761+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.765+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.766+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.767+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.768+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.769+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.771+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.772+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.773+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.774+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.775+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.776+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.777+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.778+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.779+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.780+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.781+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.781+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.782+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.783+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.784+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.785+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.786+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.787+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.788+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.790+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.790+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.791+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.791+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.793+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.794+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.795+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.796+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.796+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.797+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.798+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.798+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.799+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.799+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.800+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.802+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.803+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.804+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.805+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.805+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.806+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.807+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.808+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.809+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.810+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.811+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.812+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.812+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.813+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.813+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.814+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.815+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.816+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.817+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.817+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:38:30.818+0000] {logging_mixin.py:188} WARNING - 100%|##########| 60/60 [00:00<00:00, 884.19it/s]
+[2024-07-15T08:38:30.818+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-15T08:38:30.819+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-15T08:38:30.825+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_ticker, task_id=etl_usd_mxn, run_id=manual__2024-07-15T08:37:19.569360+00:00, execution_date=20240715T083719, start_date=20240715T083720, end_date=20240715T083830
+[2024-07-15T08:38:30.879+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-15T08:38:30.890+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-15T08:38:30.891+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

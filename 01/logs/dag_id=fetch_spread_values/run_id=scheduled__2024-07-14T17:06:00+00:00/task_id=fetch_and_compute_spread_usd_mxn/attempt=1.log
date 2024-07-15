@@ -1,0 +1,37 @@
+[2024-07-14T17:07:46.541+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-14T17:07:46.558+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_usd_mxn scheduled__2024-07-14T17:06:00+00:00 [queued]>
+[2024-07-14T17:07:46.572+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_usd_mxn scheduled__2024-07-14T17:06:00+00:00 [queued]>
+[2024-07-14T17:07:46.574+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-14T17:07:46.585+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_and_compute_spread_usd_mxn> on 2024-07-14 17:06:00+00:00
+[2024-07-14T17:07:46.591+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=7281) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-14T17:07:46.594+0000] {standard_task_runner.py:63} INFO - Started process 7297 to run task
+[2024-07-14T17:07:46.593+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'fetch_spread_values', 'fetch_and_compute_spread_usd_mxn', 'scheduled__2024-07-14T17:06:00+00:00', '--job-id', '2194', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpyfmtcmxf']
+[2024-07-14T17:07:46.601+0000] {standard_task_runner.py:91} INFO - Job 2194: Subtask fetch_and_compute_spread_usd_mxn
+[2024-07-14T17:07:46.660+0000] {task_command.py:426} INFO - Running <TaskInstance: fetch_spread_values.fetch_and_compute_spread_usd_mxn scheduled__2024-07-14T17:06:00+00:00 [running]> on host d537c34a4880
+[2024-07-14T17:07:46.737+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_spread_values' AIRFLOW_CTX_TASK_ID='fetch_and_compute_spread_usd_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-14T17:06:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-14T17:06:00+00:00'
+[2024-07-14T17:07:46.739+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-14T17:07:46.887+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-14T17:07:46.888+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-14T17:07:46.895+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=fetch_spread_values, task_id=fetch_and_compute_spread_usd_mxn, run_id=scheduled__2024-07-14T17:06:00+00:00, execution_date=20240714T170600, start_date=20240714T170746, end_date=20240714T170746
+[2024-07-14T17:07:46.944+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-14T17:07:46.955+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-14T17:07:46.956+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-07-14T20:39:21.320+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-14T20:39:21.351+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_usd_mxn scheduled__2024-07-14T17:06:00+00:00 [queued]>
+[2024-07-14T20:39:21.359+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_usd_mxn scheduled__2024-07-14T17:06:00+00:00 [queued]>
+[2024-07-14T20:39:21.360+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-14T20:39:21.376+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_and_compute_spread_usd_mxn> on 2024-07-14 17:06:00+00:00
+[2024-07-14T20:39:21.381+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=4612) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-14T20:39:21.382+0000] {standard_task_runner.py:63} INFO - Started process 4621 to run task
+[2024-07-14T20:39:21.381+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'fetch_spread_values', 'fetch_and_compute_spread_usd_mxn', 'scheduled__2024-07-14T17:06:00+00:00', '--job-id', '2181', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmp0ulefe6l']
+[2024-07-14T20:39:21.385+0000] {standard_task_runner.py:91} INFO - Job 2181: Subtask fetch_and_compute_spread_usd_mxn
+[2024-07-14T20:39:21.433+0000] {task_command.py:426} INFO - Running <TaskInstance: fetch_spread_values.fetch_and_compute_spread_usd_mxn scheduled__2024-07-14T17:06:00+00:00 [running]> on host 77caf7e4b282
+[2024-07-14T20:39:21.562+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_spread_values' AIRFLOW_CTX_TASK_ID='fetch_and_compute_spread_usd_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-14T17:06:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-14T17:06:00+00:00'
+[2024-07-14T20:39:21.568+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-14T20:39:21.802+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-14T20:39:21.810+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-14T20:39:21.835+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=fetch_spread_values, task_id=fetch_and_compute_spread_usd_mxn, run_id=scheduled__2024-07-14T17:06:00+00:00, execution_date=20240714T170600, start_date=20240714T203921, end_date=20240714T203921
+[2024-07-14T20:39:21.908+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-14T20:39:21.930+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

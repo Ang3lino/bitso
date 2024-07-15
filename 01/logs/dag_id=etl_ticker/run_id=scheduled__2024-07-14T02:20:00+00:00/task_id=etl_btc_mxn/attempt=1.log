@@ -1,0 +1,286 @@
+[2024-07-15T08:33:33.601+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-15T08:33:33.657+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_ticker.etl_btc_mxn scheduled__2024-07-14T02:20:00+00:00 [queued]>
+[2024-07-15T08:33:33.689+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_ticker.etl_btc_mxn scheduled__2024-07-14T02:20:00+00:00 [queued]>
+[2024-07-15T08:33:33.695+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-15T08:33:33.774+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): etl_btc_mxn> on 2024-07-14 02:20:00+00:00
+[2024-07-15T08:33:33.792+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2880) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-15T08:33:33.798+0000] {standard_task_runner.py:63} INFO - Started process 2892 to run task
+[2024-07-15T08:33:33.794+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_ticker', 'etl_btc_mxn', 'scheduled__2024-07-14T02:20:00+00:00', '--job-id', '231', '--raw', '--subdir', 'DAGS_FOLDER/et_dag.py', '--cfg-path', '/tmp/tmpgv81krqy']
+[2024-07-15T08:33:33.799+0000] {standard_task_runner.py:91} INFO - Job 231: Subtask etl_btc_mxn
+[2024-07-15T08:33:33.864+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_ticker.etl_btc_mxn scheduled__2024-07-14T02:20:00+00:00 [running]> on host 07ee111a4cec
+[2024-07-15T08:33:33.988+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_ticker' AIRFLOW_CTX_TASK_ID='etl_btc_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-14T02:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-14T02:20:00+00:00'
+[2024-07-15T08:33:33.990+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-15T08:33:34.143+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:34.143+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:33+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:34.144+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:34.144+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:33+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:35.286+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:35.287+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:34+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:35.287+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:35.288+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:34+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:36.435+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:36.435+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:36+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:36.436+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:36.436+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:36+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:37.573+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:37.573+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:37+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:37.574+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:37.574+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:37+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:38.708+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:38.709+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:38+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:38.709+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:38.709+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:38+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:39.839+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:39.840+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:39+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:39.841+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:39.841+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:39+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:40.969+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:40.970+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:40+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:40.970+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:40.970+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:40+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:42.102+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:42.102+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:41+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:42.103+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:42.103+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:41+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:43.242+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:43.243+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:42+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:43.243+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:43.243+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:42+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:44.376+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:44.377+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:43+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:44.377+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:44.377+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:43+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:45.522+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:45.523+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:45+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:45.523+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:45.523+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:45+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:46.665+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:46.665+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:46+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:46.666+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:46.666+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:46+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:47.814+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:47.815+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:47+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:47.815+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:47.816+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:47+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:49.002+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:49.003+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:48+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:49.003+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:49.004+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:48+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:50.147+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:50.147+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:49+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:50.148+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:50.148+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:49+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:51.286+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:51.286+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:50+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:51.287+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:51.287+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:50+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:52.426+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:52.426+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:52+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:52.427+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:52.427+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:52+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:53.560+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:53.561+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:53+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:53.561+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:53.562+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:53+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:54.695+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:54.696+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:54+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:54.696+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:54.697+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:54+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:55.834+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:55.835+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:55+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:55.835+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:55.836+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:55+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:56.970+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:56.970+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:56+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:56.970+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:56.971+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:56+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:58.118+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:58.119+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:57+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:58.119+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:58.120+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:57+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:33:59.261+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:33:59.261+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:33:58+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:33:59.261+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:33:59.262+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:33:58+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:00.429+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:00.430+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:00+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:00.430+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:00.430+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:00+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:01.571+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:01.571+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:01+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:01.572+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:01.572+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:01+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:02.707+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:02.707+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:02+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:02.707+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:02.708+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:02+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:03.842+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:03.843+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:03+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:03.843+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:03.843+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:03+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:04.977+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:04.977+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:04+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:04.978+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:04.978+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:04+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:06.119+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:06.120+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:05+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:06.120+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:06.120+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:05+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:07.260+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:07.261+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:06+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:07.262+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:07.262+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:06+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:08.397+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:08.397+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:08+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:08.398+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:08.398+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:08+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:09.530+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:09.531+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:09+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:09.531+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:09.531+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:09+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:10.663+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:10.665+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:10+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:10.665+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:10.665+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:10+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:11.805+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:11.806+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:11+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:11.806+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:11.807+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:11+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:12.940+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:12.941+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:12+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:12.942+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:12.944+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:12+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:14.077+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:14.078+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:13+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:14.078+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:14.078+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:13+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:15.220+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:15.225+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:14+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:15.226+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:15.226+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:14+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:16.411+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:16.411+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:16+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:16.411+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:16.412+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:16+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:17.593+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:17.594+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:17+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:17.594+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:17.594+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:17+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:18.755+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:18.756+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:18+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:18.756+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:18.756+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:18+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:19.936+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:19.936+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:19+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:19.937+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:19.937+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:19+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:21.121+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:21.122+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:20+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:21.122+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:21.123+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:20+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:22.260+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:22.261+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:21+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:22.261+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:22.261+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:21+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:23.399+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:23.400+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:23+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:23.400+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:23.400+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:23+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:24.548+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:24.548+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:24+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:24.549+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:24.549+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:24+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:25.716+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:25.717+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:25+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:25.717+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:25.717+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:25+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:26.886+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:26.887+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:26+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:26.887+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:26.887+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:26+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:28.011+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:28.012+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:27+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:28.012+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:28.012+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:27+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:29.150+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:29.151+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:28+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:29.151+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:29.151+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:28+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:30.286+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:30.286+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:29+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:30.287+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:30.287+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:29+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:31.448+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:31.448+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:31+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:31.449+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:31.449+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:31+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:32.609+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:32.610+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:32+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:32.611+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:32.611+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:32+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:33.761+0000] {et_dag.py:26} INFO - Data fetched for book btc_mxn
+[2024-07-15T08:34:33.761+0000] {et_dag.py:27} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T08:34:33+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T08:34:33.762+0000] {et_dag.py:30} INFO - Spread computed
+[2024-07-15T08:34:33.762+0000] {et_dag.py:31} INFO - {'orderbook_timestamp': '2024-07-15T08:34:33+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T08:34:34.775+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/53 [00:00<?, ?it/s]
+[2024-07-15T08:34:34.799+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.802+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.805+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.808+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.811+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.814+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.818+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.821+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.824+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.827+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.831+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.835+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.836+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.838+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.841+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.844+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.847+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.851+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.854+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.858+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.861+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.865+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.868+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.872+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.875+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.879+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.882+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.886+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.889+0000] {logging_mixin.py:188} WARNING -  53%|#####2    | 28/53 [00:00<00:00, 275.29it/s]
+[2024-07-15T08:34:34.889+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.892+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.893+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.896+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.899+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.903+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.906+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.908+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.912+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.915+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.921+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.926+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.931+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.936+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.938+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.941+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.946+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.948+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.951+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.954+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.955+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.959+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.963+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.969+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.979+0000] {logging_mixin.py:188} INFO - saved in /opt/***/bucket/get_ticker/year=2024/month=07/day=15/hour=08/data.csv
+[2024-07-15T08:34:34.994+0000] {logging_mixin.py:188} WARNING - 100%|##########| 53/53 [00:00<00:00, 256.29it/s]
+[2024-07-15T08:34:34.998+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-15T08:34:35.004+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-15T08:34:35.029+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_ticker, task_id=etl_btc_mxn, run_id=scheduled__2024-07-14T02:20:00+00:00, execution_date=20240714T022000, start_date=20240715T083333, end_date=20240715T083435
+[2024-07-15T08:34:35.096+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-15T08:34:35.124+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-15T08:34:35.128+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
