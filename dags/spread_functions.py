@@ -1,6 +1,7 @@
 import requests
 import os
 import csv
+import typing
 import time
 
 from datetime import datetime
@@ -8,13 +9,13 @@ from tqdm import tqdm
 from pprint import pprint
 
 
-def fetch_ticker_data(book):
+def fetch_ticker_data(book: str) -> dict:
     url = f"https://sandbox.bitso.com/api/v3/ticker/?book={book}"
     response = requests.get(url)
     data = response.json()
     return data
 
-def compute_spread(data):
+def compute_spread(data: dict) -> dict:
     best_ask = float(data['ask'])
     best_bid = float(data['bid'])
     spread = (best_ask - best_bid) * 100 / best_ask
@@ -26,7 +27,7 @@ def compute_spread(data):
         "spread": spread
     }
 
-def prepare_dir(record, base_path):
+def prepare_dir(record: dict, base_path: str) -> typing.Tuple[str, bool]:
     timestamp = datetime.strptime(record["orderbook_timestamp"], "%Y-%m-%dT%H:%M:%S%z")
     year = timestamp.strftime("%Y")
     month = timestamp.strftime("%m")
@@ -40,7 +41,7 @@ def prepare_dir(record, base_path):
     file_exists = os.path.isfile(file_path)
     return file_path, file_exists
 
-def save_to_partitioned_directory(records, base_path):
+def save_to_partitioned_directory(records: typing.List[dict], base_path: str) -> None:
     for record in tqdm(records):
         file_path, file_exists = prepare_dir(record, base_path)
         print(f'saved in {file_path}')

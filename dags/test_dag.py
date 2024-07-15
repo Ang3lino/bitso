@@ -25,11 +25,8 @@ with DAG(
     start_date=datetime(2024, 7, 13),
     schedule_interval='@daily'
 ) as dag:
-    logging.info('esto se corre?')
     task1 = PythonOperator(
         task_id='greet',
         python_callable=greet
     )
-
-    logging.info('esto no se imprime')
     task1

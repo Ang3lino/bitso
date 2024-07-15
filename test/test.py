@@ -71,3 +71,20 @@ def test_prepare_dir(spread_record, tmp_path):
     assert file_exists == False
     assert os.path.isdir(expected_dir)
 
+
+url = "http://127.0.0.1:8000/store_spread"
+headers = {
+    "Content-Type": "application/json"
+}
+
+data = {
+    "orderbook_timestamp": "2024-07-14T12:00:00+00:00",
+    "book": "btc_mxn",
+    "bid": 790000.00,
+    "ask": 800000.00,
+    "spread": 1.10
+}
+response = requests.post(url, headers=headers, json=data)
+print(response)
+response = requests.post('http://127.0.0.1:8000/load_spreads', )
+print(response)
