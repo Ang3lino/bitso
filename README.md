@@ -31,3 +31,38 @@ docker-compose -f compose.yml up -d
 ```
 
 Access Airflow in your web browser at `localhost:8080`. Navigate to the `etl_ticker` DAG. Refer to `compose.yml` for credentials. Security can be improved.
+
+## Challenge 2: Daily batch Streaming
+
+### Objective
+The goal of this challenge is to optimize and model data from four snapshot tables representing deposits, withdrawals, events, and users in a database. The objective is to facilitate data insights and analytics. Key tasks include:
+
+- **Active Users**: Determine how many users were active on a given day based on deposits or withdrawals.
+- **No Deposit Users**: Identify users who have not made any deposits.
+- **High Volume Depositors**: Identify users who have historically made more than 5 deposits on a given day.
+- **User Login Analysis**: Track the last login time for users and calculate login frequency between two dates.
+- **Currency Insights**: Count unique currencies deposited and withdrawn on a given day.
+- **Daily Currency Deposits**: Calculate the total amount deposited for a specific currency on a given day.
+
+### Data Modeling
+To achieve these goals, we have refined the database schema as follows:
+- Initial table definitions are captured in `sql/db.sql`.
+- Optimized data model is outlined in `sql/new_model.sql`.
+- Introduced a `target` schema to store data extracted from the initial snapshot files.
+
+The new model includes:
+- **Categorical Tables**: `target.user`, `target.currency`, and `target.tx_status` for storing user-related data, currency information, and transaction statuses (We could have used enumeration type too).
+- **Base Tables**: Utilization of inheritance (`base_*` tables) to streamline attributes common across multiple entities.
+- **Primary and Foreign Keys**: Ensuring data integrity and facilitating efficient querying.
+
+### Data Migration
+Data migration from the original snapshot tables to the optimized schema (`target`) is managed through `sql/migration.sql`. This script ensures seamless transfer while adhering to the new data model's structure.
+
+### Querying Insights
+To address the specified questions, SQL queries have been formulated and stored in `sql/queries.sql`. These queries are designed to extract actionable insights, enabling stakeholders to derive meaningful analytics from the data.
+
+### Considerations
+While the new data model enhances data integrity and query efficiency, potential downsides include increased computation for joins due to normalization and inheritance. However, these trade-offs are balanced against improved storage efficiency and reduced redundancy.
+
+For high-performance scenarios, denormalization and reducing constraints may be considered, depending on specific business needs, we will prefer NO SQL, database or data warehouse solution. This approach can optimize query speed at the expense of data redundancy.
+
