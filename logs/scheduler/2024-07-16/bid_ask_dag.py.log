@@ -3041,3 +3041,24 @@ SyntaxError: expected ':'
 [2024-07-16T06:10:26.175+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:10:26.175+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-07-16T06:10:26.187+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:10:26.187+0000] {dag.py:3954} INFO - Setting next_dagrun for etl_ticker to 2024-07-14 00:00:00+00:00, run_after=2024-07-14 00:10:00+00:00
 [2024-07-16T06:10:26.196+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.062 seconds
+[2024-07-16T06:10:56.646+0000] {processor.py:161} INFO - Started process (PID=2383) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-16T06:10:56.646+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-16T06:10:56.648+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:10:56.647+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-16T06:10:56.658+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-16T06:10:56.669+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:10:56.669+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-16T06:10:56.681+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:10:56.681+0000] {dag.py:3954} INFO - Setting next_dagrun for etl_ticker to 2024-07-14 00:00:00+00:00, run_after=2024-07-14 00:10:00+00:00
+[2024-07-16T06:10:56.691+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.050 seconds
+[2024-07-16T06:11:26.721+0000] {processor.py:161} INFO - Started process (PID=2404) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-16T06:11:26.722+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-16T06:11:26.724+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:11:26.724+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-16T06:11:26.737+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-16T06:11:26.752+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:11:26.752+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-16T06:11:26.764+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:11:26.764+0000] {dag.py:3954} INFO - Setting next_dagrun for etl_ticker to 2024-07-14 00:00:00+00:00, run_after=2024-07-14 00:10:00+00:00
+[2024-07-16T06:11:26.774+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.056 seconds
+[2024-07-16T06:11:57.171+0000] {processor.py:161} INFO - Started process (PID=2425) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-16T06:11:57.172+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-16T06:11:57.174+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:11:57.174+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-16T06:11:57.186+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-16T06:11:57.201+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:11:57.200+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-16T06:11:57.213+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:11:57.213+0000] {dag.py:3954} INFO - Setting next_dagrun for etl_ticker to 2024-07-14 00:00:00+00:00, run_after=2024-07-14 00:10:00+00:00
+[2024-07-16T06:11:57.222+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.053 seconds
