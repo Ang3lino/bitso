@@ -62,8 +62,33 @@ Data migration from the original snapshot tables to the optimized schema (`targe
 ### Querying Insights
 To address the specified questions, SQL queries have been formulated and stored in `sql/queries.sql`. These queries are designed to extract actionable insights, enabling stakeholders to derive meaningful analytics from the data.
 
+### Orchestration
+The dag will read from source files, transform and load the rows into the new model using PostgresOperator. Once this is set, we will generate the result set with the requested queries and save into a separed files into `bucket/batch_output`.
+
 ### Considerations
 While the new data model enhances data integrity and query efficiency, potential downsides include increased computation for joins due to normalization and inheritance. However, these trade-offs are balanced against improved storage efficiency and reduced redundancy.
 
 For high-performance scenarios, denormalization and reducing constraints may be considered, depending on specific business needs, we will prefer NO SQL, database or data warehouse solution. This approach can optimize query speed at the expense of data redundancy.
 
+### Running the Orchestration
+Similar as before, once the containers are running, the orchestration expects to have a DB called `batch` with the new ER model and the source data. We expect also to have .csv files stored in volume `bucket/samples` as we will be using postgres `COPY` command. We also need to add postgres connection. In short: 
+
+```bash
+psql -h host.docker.internal -d airflow -U airflow -p 5432 -a -q -f ./sql/create_db.sql # create the new db, use default passwd
+psql -h host.docker.internal -d batch -U airflow -p 5432 -a -q -f ./sql/old_model.sql # load old model and run COPY
+psql -h host.docker.internal -d batch -U airflow -p 5432 -a -q -f ./sql/new_model.sql # load the new model
+
+# add the new airflow connection
+airflow connections add 'postgres_default' \
+    --conn-type 'postgres' \
+    --conn-host 'host.docker.internal' \
+    --conn-schema 'batch' \
+    --conn-login 'airflow' \
+    --conn-password 'airflow' \
+    --conn-port '5432'
+
+# optional, you can trigger the dag via CLI
+airflow dags trigger daily_batch
+```
+
+The generated files will be in `bucket/batch_output`.
