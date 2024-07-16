@@ -1,0 +1,248 @@
+[2024-07-14T12:08:35.775+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-14T12:08:35.795+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [queued]>
+[2024-07-14T12:08:35.803+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [queued]>
+[2024-07-14T12:08:35.804+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-14T12:08:35.817+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_and_compute_spread_btc_mxn> on 2024-07-14 12:01:00+00:00
+[2024-07-14T12:08:35.822+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=5153) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-14T12:08:35.825+0000] {standard_task_runner.py:63} INFO - Started process 5168 to run task
+[2024-07-14T12:08:35.824+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'fetch_spread_values', 'fetch_and_compute_spread_btc_mxn', 'scheduled__2024-07-14T12:01:00+00:00', '--job-id', '1545', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpsmpmh059']
+[2024-07-14T12:08:35.827+0000] {standard_task_runner.py:91} INFO - Job 1545: Subtask fetch_and_compute_spread_btc_mxn
+[2024-07-14T12:08:35.870+0000] {task_command.py:426} INFO - Running <TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [running]> on host d537c34a4880
+[2024-07-14T12:08:35.923+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_spread_values' AIRFLOW_CTX_TASK_ID='fetch_and_compute_spread_btc_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-14T12:01:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-14T12:01:00+00:00'
+[2024-07-14T12:08:35.924+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-14T12:08:36.218+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-14T12:08:36.220+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-14T12:08:36.227+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=fetch_spread_values, task_id=fetch_and_compute_spread_btc_mxn, run_id=scheduled__2024-07-14T12:01:00+00:00, execution_date=20240714T120100, start_date=20240714T120835, end_date=20240714T120836
+[2024-07-14T12:08:36.260+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-14T12:08:36.270+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-14T12:08:36.271+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-07-14T20:37:25.568+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-14T20:37:25.621+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [queued]>
+[2024-07-14T20:37:25.635+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [queued]>
+[2024-07-14T20:37:25.643+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-14T20:37:25.662+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_and_compute_spread_btc_mxn> on 2024-07-14 12:01:00+00:00
+[2024-07-14T20:37:25.675+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'fetch_spread_values', 'fetch_and_compute_spread_btc_mxn', 'scheduled__2024-07-14T12:01:00+00:00', '--job-id', '1571', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpk9q39mk0']
+[2024-07-14T20:37:25.679+0000] {standard_task_runner.py:91} INFO - Job 1571: Subtask fetch_and_compute_spread_btc_mxn
+[2024-07-14T20:37:25.681+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=3371) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-14T20:37:25.685+0000] {standard_task_runner.py:63} INFO - Started process 3377 to run task
+[2024-07-14T20:37:25.734+0000] {task_command.py:426} INFO - Running <TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [running]> on host 77caf7e4b282
+[2024-07-14T20:37:25.820+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_spread_values' AIRFLOW_CTX_TASK_ID='fetch_and_compute_spread_btc_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-14T12:01:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-14T12:01:00+00:00'
+[2024-07-14T20:37:25.821+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-14T20:37:26.002+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-14T20:37:26.003+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-14T20:37:26.009+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=fetch_spread_values, task_id=fetch_and_compute_spread_btc_mxn, run_id=scheduled__2024-07-14T12:01:00+00:00, execution_date=20240714T120100, start_date=20240714T203725, end_date=20240714T203726
+[2024-07-14T20:37:26.039+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-14T20:37:26.046+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-07-15T06:50:00.772+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-15T06:50:00.803+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [queued]>
+[2024-07-15T06:50:00.809+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [queued]>
+[2024-07-15T06:50:00.810+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-15T06:50:00.836+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_and_compute_spread_btc_mxn> on 2024-07-14 12:01:00+00:00
+[2024-07-15T06:50:00.842+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=5969) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-15T06:50:00.842+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'fetch_spread_values', 'fetch_and_compute_spread_btc_mxn', 'scheduled__2024-07-14T12:01:00+00:00', '--job-id', '1545', '--raw', '--subdir', 'DAGS_FOLDER/et_dag.py', '--cfg-path', '/tmp/tmps75ue9sa']
+[2024-07-15T06:50:00.845+0000] {standard_task_runner.py:63} INFO - Started process 5977 to run task
+[2024-07-15T06:50:00.847+0000] {standard_task_runner.py:91} INFO - Job 1545: Subtask fetch_and_compute_spread_btc_mxn
+[2024-07-15T06:50:00.895+0000] {task_command.py:426} INFO - Running <TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [running]> on host 52e7a9c3d832
+[2024-07-15T06:50:00.990+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_spread_values' AIRFLOW_CTX_TASK_ID='fetch_and_compute_spread_btc_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-14T12:01:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-14T12:01:00+00:00'
+[2024-07-15T06:50:00.994+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-15T06:50:01.179+0000] {et_dag.py:27} INFO - Data fetched for book btc_mxn
+[2024-07-15T06:50:01.180+0000] {et_dag.py:28} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T06:50:00+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T06:50:01.180+0000] {et_dag.py:31} INFO - Spread computed
+[2024-07-15T06:50:01.181+0000] {et_dag.py:32} INFO - {'orderbook_timestamp': '2024-07-15T06:50:00+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T06:50:01.182+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-15T06:50:01.183+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 398, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 236, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff8de877a0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /store_spread (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8de877a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/et_dag.py", line 34, in trigger_fetch_and_compute
+    response = requests.post(URL_STORE_RECORD, headers=HEADERS_JSON, json=spread_record)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /store_spread (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8de877a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-07-15T06:50:01.200+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=fetch_spread_values, task_id=fetch_and_compute_spread_btc_mxn, run_id=scheduled__2024-07-14T12:01:00+00:00, execution_date=20240714T120100, start_date=20240715T065000, end_date=20240715T065001
+[2024-07-15T06:50:01.213+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 1545 for task fetch_and_compute_spread_btc_mxn (HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /store_spread (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8de877a0>: Failed to establish a new connection: [Errno 111] Connection refused')); 5977)
+[2024-07-15T06:50:01.238+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-15T06:50:01.253+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-07-15T07:09:55.078+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-15T07:09:55.105+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [queued]>
+[2024-07-15T07:09:55.122+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [queued]>
+[2024-07-15T07:09:55.129+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-15T07:09:55.155+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): fetch_and_compute_spread_btc_mxn> on 2024-07-14 12:01:00+00:00
+[2024-07-15T07:09:55.166+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=377) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-15T07:09:55.173+0000] {standard_task_runner.py:63} INFO - Started process 387 to run task
+[2024-07-15T07:09:55.170+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'fetch_spread_values', 'fetch_and_compute_spread_btc_mxn', 'scheduled__2024-07-14T12:01:00+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/et_dag.py', '--cfg-path', '/tmp/tmpsxbvnv7e']
+[2024-07-15T07:09:55.191+0000] {standard_task_runner.py:91} INFO - Job 76: Subtask fetch_and_compute_spread_btc_mxn
+[2024-07-15T07:09:55.257+0000] {task_command.py:426} INFO - Running <TaskInstance: fetch_spread_values.fetch_and_compute_spread_btc_mxn scheduled__2024-07-14T12:01:00+00:00 [running]> on host 07ee111a4cec
+[2024-07-15T07:09:55.324+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='fetch_spread_values' AIRFLOW_CTX_TASK_ID='fetch_and_compute_spread_btc_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-14T12:01:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-14T12:01:00+00:00'
+[2024-07-15T07:09:55.328+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-15T07:09:55.516+0000] {et_dag.py:27} INFO - Data fetched for book btc_mxn
+[2024-07-15T07:09:55.516+0000] {et_dag.py:28} INFO - {'success': True, 'payload': {'high': '1119480.00', 'last': '1119480.00', 'created_at': '2024-07-15T07:09:55+00:00', 'book': 'btc_mxn', 'volume': '0', 'vwap': '0', 'low': '1119480.00', 'ask': '1023070.02', 'bid': '1023069.98', 'change_24': '0.00', 'rolling_average_change': {}}}
+[2024-07-15T07:09:55.517+0000] {et_dag.py:31} INFO - Spread computed
+[2024-07-15T07:09:55.517+0000] {et_dag.py:32} INFO - {'orderbook_timestamp': '2024-07-15T07:09:55+00:00', 'book': 'btc_mxn', 'bid': 1023069.98, 'ask': 1023070.02, 'spread': 3.909800820598076e-06}
+[2024-07-15T07:09:55.517+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-15T07:09:55.518+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 398, in request
+    self.endheaders()
+  File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 236, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff89a747d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /store_spread (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff89a747d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/et_dag.py", line 34, in trigger_fetch_and_compute
+    response = requests.post(URL_STORE_RECORD, headers=HEADERS_JSON, json=spread_record)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /store_spread (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff89a747d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-07-15T07:09:55.526+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=fetch_spread_values, task_id=fetch_and_compute_spread_btc_mxn, run_id=scheduled__2024-07-14T12:01:00+00:00, execution_date=20240714T120100, start_date=20240715T070955, end_date=20240715T070955
+[2024-07-15T07:09:55.532+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 76 for task fetch_and_compute_spread_btc_mxn (HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /store_spread (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff89a747d0>: Failed to establish a new connection: [Errno 111] Connection refused')); 387)
+[2024-07-15T07:09:55.575+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-15T07:09:55.584+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-15T07:09:55.585+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,59 @@
+# Common configuration for Spark services
+x-spark-common: &spark-common
+  image: bitnami/spark:latest  # Use the latest Bitnami Spark image
+  volumes:
+    - ./jobs:/opt/bitnami/spark/jobs  # Mount the local jobs directory to the Spark jobs directory
+  networks:
+    - airflow-net  # Connect to the airflow-net network
+
+# Common configuration for Airflow services
+x-airflow-common: &airflow-common
+  build:
+    context: .  # Use the current directory as the build context
+    dockerfile: Dockerfile  # Specify the Dockerfile to use for building the image
+  env_file:
+    - airflow.env  # Load environment variables from the airflow.env file
+  volumes:
+    - ./jobs:/opt/airflow/jobs  # Mount the local jobs directory to the Airflow jobs directory
+    - ./dags:/opt/airflow/dags  # Mount the local dags directory to the Airflow dags directory
+    - ./logs:/opt/airflow/logs  # Mount the local logs directory to the Airflow logs directory
+    - ./test:/opt/airflow/test  # Mount the local test directory to the Airflow test directory
+    - ./server:/opt/airflow/server  # Mount the local server directory to the Airflow server directory
+    - ./bucket:/opt/airflow/bucket  # Mount the local bucket directory to the Airflow bucket directory
+  depends_on:
+    - postgres  # Ensure the postgres service is started before this service
+  networks:
+    - airflow-net  # Connect to the airflow-net network
+
+services:
+
+  # PostgreSQL service configuration
+  postgres:
+    image: postgres:14.0  # Use the PostgreSQL 14.0 image
+    environment:
+      - POSTGRES_USER=airflow  # Set the PostgreSQL username to 'airflow'
+      - POSTGRES_PASSWORD=airflow  # Set the PostgreSQL password to 'airflow'
+      - POSTGRES_DB=airflow  # Set the PostgreSQL database name to 'airflow'
+    networks:
+      - airflow-net  # Connect to the airflow-net network
+    ports:
+      - "5432:5432"  # Expose port 5432 to the host
+
+  # Airflow webserver service configuration
+  webserver:
+    <<: *airflow-common  # Inherit common Airflow configuration
+    command: webserver  # Start the Airflow webserver
+    ports:
+      - "8080:8080"  # Expose port 8080 to the host for the Airflow web interface
+      - "8000:8000"  # Expose port 8000 to the host
+    depends_on:
+      - scheduler  # Ensure the scheduler service is started before this service
+
+  # Airflow scheduler service configuration
+  scheduler:
+    <<: *airflow-common  # Inherit common Airflow configuration
+    command: bash -c "airflow db migrate && airflow users create --username airflow --firstname angel --lastname lm --role Admin --email m.eng.angel.manriquez@gmail.com --password airflow && airflow scheduler"  
+    # Perform database migrations, create an Airflow user, and start the Airflow scheduler
+
+networks:
+  airflow-net:  # Define the airflow-net network
