@@ -63,7 +63,7 @@ def etl_spread(book: str) -> None:
             #     emit_alarm(record)
     
     logging.info(f'Writing records gathered from {duration} seconds.')
-    save_to_partitioned_directory(records, BASE_PATH)
+    save_to_partitioned_directory(records, BASE_PATH, book)
 
 # Define the DAG for saving data every ten minutes
 with DAG(

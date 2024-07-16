@@ -41,7 +41,7 @@ def compute_spread(data: dict) -> dict:
         "spread": spread
     }
 
-def prepare_dir(record: dict, base_path: str) -> typing.Tuple[str, bool]:
+def prepare_dir(record: dict, base_path: str, book: str) -> typing.Tuple[str, bool]:
     """
     Prepares and creates directory structure based on the timestamp of the record.
     
@@ -58,7 +58,7 @@ def prepare_dir(record: dict, base_path: str) -> typing.Tuple[str, bool]:
     day = timestamp.strftime("%d")
     hour = timestamp.strftime("%H")
     
-    directory_path = os.path.join(base_path, f"year={year}", f"month={month}", f"day={day}", f"hour={hour}")
+    directory_path = os.path.join(base_path, f"year={year}", f"month={month}", f"day={day}", f"hour={hour}", f"book={book}")
     os.makedirs(directory_path, exist_ok=True)
     
     file_path = os.path.join(directory_path, f"data.csv")
@@ -66,7 +66,7 @@ def prepare_dir(record: dict, base_path: str) -> typing.Tuple[str, bool]:
     
     return file_path, file_exists
 
-def save_to_partitioned_directory(records: typing.List[dict], base_path: str) -> None:
+def save_to_partitioned_directory(records: typing.List[dict], base_path: str, book: str) -> None:
     """
     Saves records to partitioned directories in CSV format.
     
@@ -75,7 +75,7 @@ def save_to_partitioned_directory(records: typing.List[dict], base_path: str) ->
         base_path (str): Base directory path for storing data.
     """
     for record in tqdm(records):
-        file_path, file_exists = prepare_dir(record, base_path)
+        file_path, file_exists = prepare_dir(record, base_path, book)
         print(f'Saved in {file_path}')
         
         with open(file_path, 'a', newline='', encoding='utf-8') as csvfile:

@@ -15,14 +15,9 @@ d exec -it $CONTAINER_NAME bash
 
 psql --host host.docker.internal -U airflow
 psql --host host.docker.internal -U airflow -d batch
+
 psql -h host.docker.internal -d batch -U airflow -p 5432 -a -q -f ./sql/db.sql
 psql -h host.docker.internal -d batch -U airflow -p 5432 -a -q -f ./sql/new_model.sql
-
-
-
-psql -h localhost -d userstoreis -U admin -p 5432 -a -q -f /home/jobs/Desktop/resources/postgresql.sql
-
-
 
 pg_dump -h host.docker.internal -p 5432 -d old  -U airflow -s -F p -E UTF-8 -f ./out_schema.sql
 
