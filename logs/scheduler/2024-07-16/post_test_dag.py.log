@@ -4762,3 +4762,24 @@
 [2024-07-16T06:11:57.201+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:11:57.200+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-07-16T06:11:57.212+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:11:57.212+0000] {dag.py:3954} INFO - Setting next_dagrun for post_spread_data to 2024-07-15 00:00:00+00:00, run_after=2024-07-16 00:00:00+00:00
 [2024-07-16T06:11:57.221+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/post_test_dag.py took 0.048 seconds
+[2024-07-16T06:12:27.642+0000] {processor.py:161} INFO - Started process (PID=2449) to work on /opt/airflow/dags/post_test_dag.py
+[2024-07-16T06:12:27.642+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/post_test_dag.py for tasks to queue
+[2024-07-16T06:12:27.643+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:27.643+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/post_test_dag.py
+[2024-07-16T06:12:27.650+0000] {processor.py:840} INFO - DAG(s) 'post_spread_data' retrieved from /opt/airflow/dags/post_test_dag.py
+[2024-07-16T06:12:27.669+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:27.669+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-16T06:12:27.696+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:27.696+0000] {dag.py:3954} INFO - Setting next_dagrun for post_spread_data to 2024-07-15 00:00:00+00:00, run_after=2024-07-16 00:00:00+00:00
+[2024-07-16T06:12:27.706+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/post_test_dag.py took 0.068 seconds
+[2024-07-16T06:12:58.213+0000] {processor.py:161} INFO - Started process (PID=2470) to work on /opt/airflow/dags/post_test_dag.py
+[2024-07-16T06:12:58.214+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/post_test_dag.py for tasks to queue
+[2024-07-16T06:12:58.215+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:58.215+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/post_test_dag.py
+[2024-07-16T06:12:58.221+0000] {processor.py:840} INFO - DAG(s) 'post_spread_data' retrieved from /opt/airflow/dags/post_test_dag.py
+[2024-07-16T06:12:58.234+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:58.234+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-16T06:12:58.245+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:58.245+0000] {dag.py:3954} INFO - Setting next_dagrun for post_spread_data to 2024-07-15 00:00:00+00:00, run_after=2024-07-16 00:00:00+00:00
+[2024-07-16T06:12:58.254+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/post_test_dag.py took 0.043 seconds
+[2024-07-16T06:13:28.310+0000] {processor.py:161} INFO - Started process (PID=2491) to work on /opt/airflow/dags/post_test_dag.py
+[2024-07-16T06:13:28.311+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/post_test_dag.py for tasks to queue
+[2024-07-16T06:13:28.312+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:13:28.312+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/post_test_dag.py
+[2024-07-16T06:13:28.319+0000] {processor.py:840} INFO - DAG(s) 'post_spread_data' retrieved from /opt/airflow/dags/post_test_dag.py
+[2024-07-16T06:13:28.334+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:13:28.334+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-16T06:13:28.345+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:13:28.345+0000] {dag.py:3954} INFO - Setting next_dagrun for post_spread_data to 2024-07-15 00:00:00+00:00, run_after=2024-07-16 00:00:00+00:00
+[2024-07-16T06:13:28.354+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/post_test_dag.py took 0.050 seconds

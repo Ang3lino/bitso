@@ -896,3 +896,24 @@ TypeError: DAG.__init__() got an unexpected keyword argument 'template_seachpath
 [2024-07-16T06:11:56.452+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:11:56.452+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-07-16T06:11:56.463+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:11:56.462+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_batch to 2024-07-16 00:00:00+00:00, run_after=2024-07-17 00:00:00+00:00
 [2024-07-16T06:11:56.471+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/batch_dag.py took 0.321 seconds
+[2024-07-16T06:12:26.640+0000] {processor.py:161} INFO - Started process (PID=2440) to work on /opt/airflow/dags/batch_dag.py
+[2024-07-16T06:12:26.642+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/batch_dag.py for tasks to queue
+[2024-07-16T06:12:26.646+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:26.645+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/batch_dag.py
+[2024-07-16T06:12:27.110+0000] {processor.py:840} INFO - DAG(s) 'daily_batch' retrieved from /opt/airflow/dags/batch_dag.py
+[2024-07-16T06:12:27.133+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:27.133+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-16T06:12:27.143+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:27.143+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_batch to 2024-07-16 00:00:00+00:00, run_after=2024-07-17 00:00:00+00:00
+[2024-07-16T06:12:27.152+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/batch_dag.py took 0.530 seconds
+[2024-07-16T06:12:58.138+0000] {processor.py:161} INFO - Started process (PID=2461) to work on /opt/airflow/dags/batch_dag.py
+[2024-07-16T06:12:58.140+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/batch_dag.py for tasks to queue
+[2024-07-16T06:12:58.142+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:58.142+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/batch_dag.py
+[2024-07-16T06:12:58.394+0000] {processor.py:840} INFO - DAG(s) 'daily_batch' retrieved from /opt/airflow/dags/batch_dag.py
+[2024-07-16T06:12:58.405+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:58.405+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-16T06:12:58.414+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:12:58.414+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_batch to 2024-07-16 00:00:00+00:00, run_after=2024-07-17 00:00:00+00:00
+[2024-07-16T06:12:58.422+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/batch_dag.py took 0.293 seconds
+[2024-07-16T06:13:25.710+0000] {processor.py:161} INFO - Started process (PID=2482) to work on /opt/airflow/dags/batch_dag.py
+[2024-07-16T06:13:25.711+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/batch_dag.py for tasks to queue
+[2024-07-16T06:13:25.714+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:13:25.714+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/batch_dag.py
+[2024-07-16T06:13:26.194+0000] {processor.py:840} INFO - DAG(s) 'daily_batch' retrieved from /opt/airflow/dags/batch_dag.py
+[2024-07-16T06:13:26.224+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:13:26.224+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-16T06:13:26.235+0000] {logging_mixin.py:188} INFO - [2024-07-16T06:13:26.235+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_batch to 2024-07-16 00:00:00+00:00, run_after=2024-07-17 00:00:00+00:00
+[2024-07-16T06:13:26.245+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/batch_dag.py took 0.550 seconds
