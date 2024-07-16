@@ -49,6 +49,7 @@ To achieve these goals, we have refined the database schema as follows:
 - Initial table definitions are captured in `sql/db.sql`.
 - Optimized data model is outlined in `sql/new_model.sql`.
 - Introduced a `target` schema to store data extracted from the initial snapshot files.
+- Introduced a `target.login_event` table to save only login events (denormalize step).
 
 The new model includes:
 - **Categorical Tables**: `target.user`, `target.currency`, and `target.tx_status` for storing user-related data, currency information, and transaction statuses (We could have used enumeration type too).

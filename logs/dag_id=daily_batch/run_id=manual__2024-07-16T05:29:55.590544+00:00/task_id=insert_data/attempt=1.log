@@ -1,0 +1,135 @@
+[2024-07-16T05:29:56.012+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-16T05:29:56.037+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_batch.insert_data manual__2024-07-16T05:29:55.590544+00:00 [queued]>
+[2024-07-16T05:29:56.043+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_batch.insert_data manual__2024-07-16T05:29:55.590544+00:00 [queued]>
+[2024-07-16T05:29:56.043+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-16T05:29:56.068+0000] {taskinstance.py:2330} INFO - Executing <Task(PostgresOperator): insert_data> on 2024-07-16 05:29:55.590544+00:00
+[2024-07-16T05:29:56.076+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'daily_batch', 'insert_data', 'manual__2024-07-16T05:29:55.590544+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/batch_dag.py', '--cfg-path', '/tmp/tmpgxxuu2m7']
+[2024-07-16T05:29:56.079+0000] {standard_task_runner.py:91} INFO - Job 3: Subtask insert_data
+[2024-07-16T05:29:56.078+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=513) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-16T05:29:56.080+0000] {standard_task_runner.py:63} INFO - Started process 516 to run task
+[2024-07-16T05:29:56.125+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_batch.insert_data manual__2024-07-16T05:29:55.590544+00:00 [running]> on host 6f712de23803
+[2024-07-16T05:29:56.173+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='angel' AIRFLOW_CTX_DAG_ID='daily_batch' AIRFLOW_CTX_TASK_ID='insert_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-16T05:29:55.590544+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-16T05:29:55.590544+00:00'
+[2024-07-16T05:29:56.174+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-16T05:29:56.210+0000] {sql.py:276} INFO - Executing: 
+-- from source there was an empty record
+delete from user_id where user_id is null;
+
+-- Insert users from the old database to the new database
+INSERT INTO target."user" (user_id)
+SELECT DISTINCT user_id
+FROM user_id;
+
+-- Insert distinct currencies from deposits and withdrawals
+INSERT INTO target.currency (currency_code)
+SELECT DISTINCT currency
+FROM deposit
+UNION
+SELECT DISTINCT currency
+FROM withdrawals;
+
+-- Insert distinct transaction statuses from deposits and withdrawals
+INSERT INTO target.tx_status (tx_status_code)
+SELECT DISTINCT tx_status
+FROM deposit
+UNION
+SELECT DISTINCT tx_status
+FROM withdrawals;
+
+-- Insert deposits into the target deposit table
+INSERT INTO target.deposit (event_timestamp, user_id, amount, currency_code, tx_status_code, type)
+SELECT event_timestamp, user_id, amount, currency AS currency_code, tx_status AS tx_status_code, 'deposit' AS type
+FROM deposit;
+
+-- Insert withdrawals into the target withdrawal table
+INSERT INTO target.withdrawal (event_timestamp, user_id, amount, currency_code, tx_status_code, interface, type)
+SELECT event_timestamp, user_id, amount, currency AS currency_code, tx_status AS tx_status_code, interface, 'withdrawal' AS type
+FROM withdrawals;
+
+-- Insert events into the target event table
+INSERT INTO target.event (event_timestamp, user_id, event_name)
+SELECT event_timestamp, user_id, event_name
+FROM event;
+
+-- Insert login events into the target login_event table
+INSERT INTO target.login_event (event_timestamp, user_id, event_name)
+SELECT event_timestamp, user_id, event_name
+FROM event
+WHERE event_name = 'login';
+
+[2024-07-16T05:29:56.218+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-07-16T05:29:56.228+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-07-16T05:29:56.237+0000] {sql.py:487} INFO - Running statement: 
+-- from source there was an empty record
+delete from user_id where user_id is null;
+
+-- Insert users from the old database to the new database
+INSERT INTO target."user" (user_id)
+SELECT DISTINCT user_id
+FROM user_id;
+
+-- Insert distinct currencies from deposits and withdrawals
+INSERT INTO target.currency (currency_code)
+SELECT DISTINCT currency
+FROM deposit
+UNION
+SELECT DISTINCT currency
+FROM withdrawals;
+
+-- Insert distinct transaction statuses from deposits and withdrawals
+INSERT INTO target.tx_status (tx_status_code)
+SELECT DISTINCT tx_status
+FROM deposit
+UNION
+SELECT DISTINCT tx_status
+FROM withdrawals;
+
+-- Insert deposits into the target deposit table
+INSERT INTO target.deposit (event_timestamp, user_id, amount, currency_code, tx_status_code, type)
+SELECT event_timestamp, user_id, amount, currency AS currency_code, tx_status AS tx_status_code, 'deposit' AS type
+FROM deposit;
+
+-- Insert withdrawals into the target withdrawal table
+INSERT INTO target.withdrawal (event_timestamp, user_id, amount, currency_code, tx_status_code, interface, type)
+SELECT event_timestamp, user_id, amount, currency AS currency_code, tx_status AS tx_status_code, interface, 'withdrawal' AS type
+FROM withdrawals;
+
+-- Insert events into the target event table
+INSERT INTO target.event (event_timestamp, user_id, event_name)
+SELECT event_timestamp, user_id, event_name
+FROM event;
+
+-- Insert login events into the target login_event table
+INSERT INTO target.login_event (event_timestamp, user_id, event_name)
+SELECT event_timestamp, user_id, event_name
+FROM event
+WHERE event_name = 'login';
+, parameters: None
+[2024-07-16T05:29:58.615+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-16T05:29:58.615+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 435, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 492, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "user_pkey"
+DETAIL:  Key (user_id)=(06eed225533224d9b5d32c8f7606a633) already exists.
+
+[2024-07-16T05:29:58.623+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=daily_batch, task_id=insert_data, run_id=manual__2024-07-16T05:29:55.590544+00:00, execution_date=20240716T052955, start_date=20240716T052956, end_date=20240716T052958
+[2024-07-16T05:29:58.630+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 3 for task insert_data (duplicate key value violates unique constraint "user_pkey"
+DETAIL:  Key (user_id)=(06eed225533224d9b5d32c8f7606a633) already exists.
+; 516)
+[2024-07-16T05:29:58.639+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-16T05:29:58.655+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-16T05:29:58.656+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

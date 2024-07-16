@@ -20,6 +20,7 @@ x-airflow-common: &airflow-common
     - ./test:/opt/airflow/test  # Mount the local test directory to the Airflow test directory
     - ./server:/opt/airflow/server  # Mount the local server directory to the Airflow server directory
     - ./bucket:/opt/airflow/bucket  # Mount the local bucket directory to the Airflow bucket directory
+    - ./sql:/opt/airflow/sql  # Mount the local bucket directory to the Airflow bucket directory
   depends_on:
     - postgres  # Ensure the postgres service is started before this service
   networks:

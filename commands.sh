@@ -16,6 +16,8 @@ d exec -it $CONTAINER_NAME bash
 psql --host host.docker.internal -U airflow
 psql --host host.docker.internal -U airflow -d batch
 
+pg_dump -h host.docker.internal -p 5432 -d old  -U airflow -s -F p -E UTF-8 -f ./out_schema.sql
+
 uvicorn server.main:app --host "0.0.0.0" --reload
 
 curl -X POST -H "Content-Type: application/json" -d "'$req'" $url
@@ -29,3 +31,11 @@ airflow connections delete 'http_default'
 airflow connections add 'http_default'     --conn-type 'http'     --conn-host 'http://127.0.0.1:8000'
 airflow dags list
 airflow dags trigger post_spread_data
+
+airflow connections add 'postgres_default' \
+    --conn-type 'postgres' \
+    --conn-host 'host.docker.internal' \
+    --conn-schema 'batch' \
+    --conn-login 'airflow' \
+    --conn-password 'airflow' \
+    --conn-port '5432'
