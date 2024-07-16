@@ -15,11 +15,11 @@ WHERE user_id NOT IN (
 );
 
 -- 3. Identify on a given day which users have made more than 5 deposits historically
-SELECT user_id
+SELECT user_id, count(*) AS deposit_count
 FROM target.deposit
 GROUP BY user_id
 HAVING COUNT(*) > 5
-AND DATE(event_timestamp) = '2020-08-20';
+;
 
 -- 4. When was the last time a user made a login
 SELECT user_id, MAX(event_timestamp) AS last_login
@@ -48,13 +48,13 @@ FROM target.deposit
 WHERE DATE(event_timestamp) = '2020-08-20'
 AND currency_code = 'mxn';
 
-SELECT event_timestamp::date , SUM(amount) AS total_amount_deposited
-FROM target.deposit
-WHERE 
-  TRUE 
-  -- AND DATE(event_timestamp) = '2020-08-20'
-  AND currency_code = 'mxn'
-GROUP BY 1
-ORDER BY 2 DESC
-;
+-- SELECT event_timestamp::date , SUM(amount) AS total_amount_deposited
+-- FROM target.deposit
+-- WHERE 
+--   TRUE 
+--   -- AND DATE(event_timestamp) = '2020-08-20'
+--   AND currency_code = 'mxn'
+-- GROUP BY 1
+-- ORDER BY 2 DESC
+-- ;
 
