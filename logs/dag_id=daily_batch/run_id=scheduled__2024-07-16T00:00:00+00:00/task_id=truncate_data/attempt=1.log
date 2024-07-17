@@ -1,0 +1,60 @@
+[2024-07-17T00:00:01.333+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-17T00:00:01.350+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_batch.truncate_data scheduled__2024-07-16T00:00:00+00:00 [queued]>
+[2024-07-17T00:00:01.353+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_batch.truncate_data scheduled__2024-07-16T00:00:00+00:00 [queued]>
+[2024-07-17T00:00:01.354+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-17T00:00:01.359+0000] {taskinstance.py:2330} INFO - Executing <Task(PostgresOperator): truncate_data> on 2024-07-16 00:00:00+00:00
+[2024-07-17T00:00:01.364+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=25762) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-17T00:00:01.364+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'daily_batch', 'truncate_data', 'scheduled__2024-07-16T00:00:00+00:00', '--job-id', '229', '--raw', '--subdir', 'DAGS_FOLDER/batch_dag.py', '--cfg-path', '/tmp/tmptrp3f0wc']
+[2024-07-17T00:00:01.365+0000] {standard_task_runner.py:63} INFO - Started process 25766 to run task
+[2024-07-17T00:00:01.365+0000] {standard_task_runner.py:91} INFO - Job 229: Subtask truncate_data
+[2024-07-17T00:00:01.389+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_batch.truncate_data scheduled__2024-07-16T00:00:00+00:00 [running]> on host 6f712de23803
+[2024-07-17T00:00:01.432+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='angel' AIRFLOW_CTX_DAG_ID='daily_batch' AIRFLOW_CTX_TASK_ID='truncate_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-16T00:00:00+00:00'
+[2024-07-17T00:00:01.433+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-17T00:00:01.439+0000] {sql.py:276} INFO - Executing: 
+TRUNCATE TABLE target."user" CASCADE;
+TRUNCATE TABLE target.currency CASCADE;
+TRUNCATE TABLE target.tx_status CASCADE;
+TRUNCATE TABLE target.deposit CASCADE;
+TRUNCATE TABLE target.withdrawal CASCADE;
+TRUNCATE TABLE target.base_transaction CASCADE;
+TRUNCATE TABLE target.login_event CASCADE;
+TRUNCATE TABLE target.event CASCADE;
+TRUNCATE TABLE target.base_event CASCADE;
+
+-- SELECT * FROM target."user";
+-- SELECT * FROM target.currency;
+-- SELECT * FROM target.tx_status;
+-- SELECT * FROM target.deposit;
+-- SELECT * FROM target.withdrawal;
+-- SELECT * FROM target.base_transaction;
+-- SELECT * FROM target.login_event;
+-- SELECT * FROM target.event;
+-- SELECT * FROM target.base_event;
+[2024-07-17T00:00:01.444+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-07-17T00:00:01.450+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-07-17T00:00:01.457+0000] {sql.py:487} INFO - Running statement: 
+TRUNCATE TABLE target."user" CASCADE;
+TRUNCATE TABLE target.currency CASCADE;
+TRUNCATE TABLE target.tx_status CASCADE;
+TRUNCATE TABLE target.deposit CASCADE;
+TRUNCATE TABLE target.withdrawal CASCADE;
+TRUNCATE TABLE target.base_transaction CASCADE;
+TRUNCATE TABLE target.login_event CASCADE;
+TRUNCATE TABLE target.event CASCADE;
+TRUNCATE TABLE target.base_event CASCADE;
+
+-- SELECT * FROM target."user";
+-- SELECT * FROM target.currency;
+-- SELECT * FROM target.tx_status;
+-- SELECT * FROM target.deposit;
+-- SELECT * FROM target.withdrawal;
+-- SELECT * FROM target.base_transaction;
+-- SELECT * FROM target.login_event;
+-- SELECT * FROM target.event;
+-- SELECT * FROM target.base_event;, parameters: None
+[2024-07-17T00:00:01.500+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-17T00:00:01.510+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=daily_batch, task_id=truncate_data, run_id=scheduled__2024-07-16T00:00:00+00:00, execution_date=20240716T000000, start_date=20240717T000001, end_date=20240717T000001
+[2024-07-17T00:00:01.548+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-17T00:00:01.556+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1297 AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+[2024-07-17T00:00:01.565+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-17T00:00:01.565+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,7 +1,14 @@
 import os
 import pytest
+import sys
 
 from unittest.mock import patch, mock_open
+
+TEST_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.abspath(os.path.join(TEST_DIR, os.pardir))
+sys.path.insert(0, PROJECT_DIR)
+
+
 from dags.spread_functions import fetch_ticker_data, compute_spread, prepare_dir, save_to_partitioned_directory
 # import requests
 # from datetime import datetime
@@ -83,6 +90,3 @@ def test_save_to_partitioned_directory(mocker, mock_spread_data):
     handle.write.assert_called()  # Ensure that write was called
 
 
-if __name__ == "__main__":
-    print(os.listdir())
-    pytest.main()

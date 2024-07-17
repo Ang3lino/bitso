@@ -46,7 +46,7 @@ services:
     command: webserver  # Start the Airflow webserver
     ports:
       - "8080:8080"  # Expose port 8080 to the host for the Airflow web interface
-      - "8000:8000"  # Expose port 8000 to the host
+      # - "8000:8000"  # Expose port 8000 to the host
     depends_on:
       - scheduler  # Ensure the scheduler service is started before this service
 

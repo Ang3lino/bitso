@@ -1,11 +1,12 @@
 import logging
-import os
 import time
-from datetime import datetime, timedelta
-
+import os
 import requests
+
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
+from airflow.providers.slack.hooks.slack_webhook import SlackWebhookOperator
+from datetime import datetime, timedelta
 from spread_functions import fetch_ticker_data, compute_spread, save_to_partitioned_directory
 from tqdm import tqdm
 
@@ -18,8 +19,11 @@ default_args = {
     'retry_delay': timedelta(minutes=1),
 }
 
+SPREAD_THRESHOLD = 0.15
 BOOKS = ["btc_mxn", "usd_mxn"]
 BASE_PATH = '/opt/airflow/bucket/get_ticker'
+WEBHOOK_URL = "https://hooks.slack.com/services/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"
+
 
 def trigger_fetch_and_compute(book: str, debug: bool = True) -> dict:
     """
@@ -53,14 +57,17 @@ def etl_spread(book: str) -> None:
     """
     duration = 10 * 60  # 10 minutes in seconds
     records = []
-    
+
     for _ in tqdm(range(duration)):
         record = trigger_fetch_and_compute(book, debug=False)
         time.sleep(1)  # Wait for 1 second
         if record:
             records.append(record)
-            # if record['spread'] > custom_value:  # in case exceed threshold we notify
-            #     emit_alarm(record)
+            if record['spread'] > SPREAD_THRESHOLD:  # in case exceed threshold we notify
+                SlackWebhookHook(
+                    webhook_token=WEBHOOK_URL,
+                    message=f"Alert! bid-ask has appeared {record}"
+                )
     
     logging.info(f'Writing records gathered from {duration} seconds.')
     save_to_partitioned_directory(records, BASE_PATH, book)
