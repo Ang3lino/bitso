@@ -8,10 +8,12 @@ docker-compose -f compose.yml up -d
 docker-compose build --no-cache
 docker-compose up -d --no-deps --build postgres
 
-CONTAINER_NAME='01-webserver-1'
+CONTAINER_NAME='bitso-webserver-1'
 d ps -a
 d ps -ad
 d exec -it $CONTAINER_NAME bash
+docker exec -it --user root $CONTAINER_NAME /bin/bash
+
 
 psql --host host.docker.internal -U airflow
 psql --host host.docker.internal -U airflow -d batch

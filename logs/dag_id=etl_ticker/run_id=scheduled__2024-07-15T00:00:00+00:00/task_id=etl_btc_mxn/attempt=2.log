@@ -1,0 +1,66 @@
+[2024-07-17T01:18:04.883+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-17T01:18:04.898+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_ticker.etl_btc_mxn scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-17T01:18:04.902+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_ticker.etl_btc_mxn scheduled__2024-07-15T00:00:00+00:00 [queued]>
+[2024-07-17T01:18:04.902+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-07-17T01:18:04.908+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): etl_btc_mxn> on 2024-07-15 00:00:00+00:00
+[2024-07-17T01:18:04.913+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=29890) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-17T01:18:04.914+0000] {standard_task_runner.py:63} INFO - Started process 29892 to run task
+[2024-07-17T01:18:04.914+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_ticker', 'etl_btc_mxn', 'scheduled__2024-07-15T00:00:00+00:00', '--job-id', '517', '--raw', '--subdir', 'DAGS_FOLDER/bid_ask_dag.py', '--cfg-path', '/tmp/tmpul3_rigr']
+[2024-07-17T01:18:04.915+0000] {standard_task_runner.py:91} INFO - Job 517: Subtask etl_btc_mxn
+[2024-07-17T01:18:04.938+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_ticker.etl_btc_mxn scheduled__2024-07-15T00:00:00+00:00 [running]> on host 6f712de23803
+[2024-07-17T01:18:04.985+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_ticker' AIRFLOW_CTX_TASK_ID='etl_btc_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:00:00+00:00'
+[2024-07-17T01:18:04.986+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-17T01:18:04.997+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/600 [00:00<?, ?it/s]
+[2024-07-17T01:18:06.151+0000] {logging_mixin.py:188} WARNING -   0%|          | 1/600 [00:01<11:31,  1.15s/it]
+[2024-07-17T01:18:07.350+0000] {logging_mixin.py:188} WARNING -   0%|          | 2/600 [00:02<11:45,  1.18s/it]
+[2024-07-17T01:18:08.490+0000] {logging_mixin.py:188} WARNING -   0%|          | 3/600 [00:03<11:33,  1.16s/it]
+[2024-07-17T01:18:09.655+0000] {logging_mixin.py:188} WARNING -   1%|          | 4/600 [00:04<11:33,  1.16s/it]
+[2024-07-17T01:18:10.845+0000] {logging_mixin.py:188} WARNING -   1%|          | 5/600 [00:05<11:37,  1.17s/it]
+[2024-07-17T01:18:12.003+0000] {logging_mixin.py:188} WARNING -   1%|1         | 6/600 [00:07<11:33,  1.17s/it]
+[2024-07-17T01:18:13.174+0000] {logging_mixin.py:188} WARNING -   1%|1         | 7/600 [00:08<11:33,  1.17s/it]
+[2024-07-17T01:18:14.323+0000] {logging_mixin.py:188} WARNING -   1%|1         | 8/600 [00:09<11:28,  1.16s/it]
+[2024-07-17T01:18:15.502+0000] {logging_mixin.py:188} WARNING -   2%|1         | 9/600 [00:10<11:30,  1.17s/it]
+[2024-07-17T01:18:16.958+0000] {logging_mixin.py:188} WARNING -   2%|1         | 10/600 [00:11<12:21,  1.26s/it]
+[2024-07-17T01:18:18.111+0000] {logging_mixin.py:188} WARNING -   2%|1         | 11/600 [00:13<12:01,  1.23s/it]
+[2024-07-17T01:18:19.573+0000] {logging_mixin.py:188} WARNING -   2%|2         | 12/600 [00:14<12:42,  1.30s/it]
+[2024-07-17T01:18:20.713+0000] {logging_mixin.py:188} WARNING -   2%|2         | 13/600 [00:15<12:13,  1.25s/it]
+[2024-07-17T01:18:21.850+0000] {logging_mixin.py:188} WARNING -   2%|2         | 14/600 [00:16<11:52,  1.22s/it]
+[2024-07-17T01:18:22.986+0000] {logging_mixin.py:188} WARNING -   2%|2         | 15/600 [00:17<11:37,  1.19s/it]
+[2024-07-17T01:18:24.136+0000] {logging_mixin.py:188} WARNING -   3%|2         | 16/600 [00:19<11:28,  1.18s/it]
+[2024-07-17T01:18:25.327+0000] {logging_mixin.py:188} WARNING -   3%|2         | 17/600 [00:20<11:29,  1.18s/it]
+[2024-07-17T01:18:26.525+0000] {logging_mixin.py:188} WARNING -   3%|3         | 18/600 [00:21<11:30,  1.19s/it]
+[2024-07-17T01:18:27.687+0000] {logging_mixin.py:188} WARNING -   3%|3         | 19/600 [00:22<11:25,  1.18s/it]
+[2024-07-17T01:18:28.867+0000] {logging_mixin.py:188} WARNING -   3%|3         | 20/600 [00:23<11:24,  1.18s/it]
+[2024-07-17T01:18:30.033+0000] {logging_mixin.py:188} WARNING -   4%|3         | 21/600 [00:25<11:20,  1.18s/it]
+[2024-07-17T01:18:31.183+0000] {logging_mixin.py:188} WARNING -   4%|3         | 22/600 [00:26<11:15,  1.17s/it]
+[2024-07-17T01:18:32.340+0000] {logging_mixin.py:188} WARNING -   4%|3         | 23/600 [00:27<11:11,  1.16s/it]
+[2024-07-17T01:18:33.494+0000] {logging_mixin.py:188} WARNING -   4%|4         | 24/600 [00:28<11:08,  1.16s/it]
+[2024-07-17T01:18:34.662+0000] {bid_ask_dag.py:87} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:18:33+00:00', 'book': 'btc_mxn', 'bid': 1162070.0, 'ask': 1166220.0, 'spread': 0.35585052562981256}
+[2024-07-17T01:18:34.666+0000] {logging_mixin.py:188} WARNING -   4%|4         | 24/600 [00:29<11:52,  1.24s/it]
+[2024-07-17T01:18:34.666+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-17T01:18:34.669+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/bid_ask_dag.py", line 88, in etl_spread
+    SlackWebhookHook(webhook_token=WEBHOOK_URL, message=f"Alert! bid-ask has appeared {record}").execute()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SlackWebhookHook.__init__() missing 1 required keyword-only argument: 'slack_webhook_conn_id'
+[2024-07-17T01:18:34.692+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=etl_ticker, task_id=etl_btc_mxn, run_id=scheduled__2024-07-15T00:00:00+00:00, execution_date=20240715T000000, start_date=20240717T011804, end_date=20240717T011834
+[2024-07-17T01:18:34.708+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 517 for task etl_btc_mxn (SlackWebhookHook.__init__() missing 1 required keyword-only argument: 'slack_webhook_conn_id'; 29892)
+[2024-07-17T01:18:34.723+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-17T01:18:34.736+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-17T01:18:34.737+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -5,7 +5,9 @@ import requests
 
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
-from airflow.providers.slack.hooks.slack_webhook import SlackWebhookOperator
+# from airflow.providers.slack.hooks.slack_webhook import SlackWebhookHook
+# from airflow.providers.slack.operators.slack_webhook import SlackWebhookOperator
+
 from datetime import datetime, timedelta
 from spread_functions import fetch_ticker_data, compute_spread, save_to_partitioned_directory
 from tqdm import tqdm
@@ -19,11 +21,28 @@ default_args = {
     'retry_delay': timedelta(minutes=1),
 }
 
-SPREAD_THRESHOLD = 0.15
+# SPREAD_THRESHOLD = 0.15
+SPREAD_THRESHOLD = 0.1
 BOOKS = ["btc_mxn", "usd_mxn"]
 BASE_PATH = '/opt/airflow/bucket/get_ticker'
-WEBHOOK_URL = "https://hooks.slack.com/services/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"
+WEBHOOK_URL = "https://hooks.slack.com/services/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"
 
+
+def emit_alarm(record: dict):
+    """
+    Sends an alarm (notification) using a webhook if a specific condition is met.
+    
+    Parameters:
+        record (dict): The record that triggered the alarm.
+    """
+    message = {
+        "text": f"Alert! Spread exceeded threshold: {record}",
+    }
+    response = requests.post(WEBHOOK_URL, json=message)
+    if response.status_code != 200:
+        logging.error(
+            f"Request to webhook returned an error {response.status_code}, the response is: {response.text}"
+        )
 
 def trigger_fetch_and_compute(book: str, debug: bool = True) -> dict:
     """
@@ -64,10 +83,9 @@ def etl_spread(book: str) -> None:
         if record:
             records.append(record)
             if record['spread'] > SPREAD_THRESHOLD:  # in case exceed threshold we notify
-                SlackWebhookHook(
-                    webhook_token=WEBHOOK_URL,
-                    message=f"Alert! bid-ask has appeared {record}"
-                )
+                logging.info(f"Threshold! {record}")
+                # SlackWebhookHook(webhook_token=WEBHOOK_URL, message=f"Alert! bid-ask has appeared {record}").execute()
+                emit_alarm(record)
     
     logging.info(f'Writing records gathered from {duration} seconds.')
     save_to_partitioned_directory(records, BASE_PATH, book)

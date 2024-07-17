@@ -1,0 +1,42 @@
+[2024-07-17T01:18:37.999+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-17T01:18:38.034+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_ticker.etl_usd_mxn scheduled__2024-07-15T00:40:00+00:00 [queued]>
+[2024-07-17T01:18:38.049+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_ticker.etl_usd_mxn scheduled__2024-07-15T00:40:00+00:00 [queued]>
+[2024-07-17T01:18:38.049+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-17T01:18:38.062+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): etl_usd_mxn> on 2024-07-15 00:40:00+00:00
+[2024-07-17T01:18:38.072+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=29938) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-17T01:18:38.076+0000] {standard_task_runner.py:63} INFO - Started process 29946 to run task
+[2024-07-17T01:18:38.072+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_ticker', 'etl_usd_mxn', 'scheduled__2024-07-15T00:40:00+00:00', '--job-id', '526', '--raw', '--subdir', 'DAGS_FOLDER/bid_ask_dag.py', '--cfg-path', '/tmp/tmpnr4xqj2c']
+[2024-07-17T01:18:38.079+0000] {standard_task_runner.py:91} INFO - Job 526: Subtask etl_usd_mxn
+[2024-07-17T01:18:38.163+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_ticker.etl_usd_mxn scheduled__2024-07-15T00:40:00+00:00 [running]> on host 6f712de23803
+[2024-07-17T01:18:38.289+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_ticker' AIRFLOW_CTX_TASK_ID='etl_usd_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T00:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T00:40:00+00:00'
+[2024-07-17T01:18:38.291+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-17T01:18:38.312+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/600 [00:00<?, ?it/s]
+[2024-07-17T01:18:39.861+0000] {bid_ask_dag.py:87} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:18:38+00:00', 'book': 'usd_mxn', 'bid': 17.61, 'ask': 17.64, 'spread': 0.1700680272108908}
+[2024-07-17T01:18:39.863+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/600 [00:01<?, ?it/s]
+[2024-07-17T01:18:39.863+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-17T01:18:39.864+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/bid_ask_dag.py", line 88, in etl_spread
+    SlackWebhookHook(webhook_token=WEBHOOK_URL, message=f"Alert! bid-ask has appeared {record}").execute()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SlackWebhookHook.__init__() missing 1 required keyword-only argument: 'slack_webhook_conn_id'
+[2024-07-17T01:18:39.874+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_ticker, task_id=etl_usd_mxn, run_id=scheduled__2024-07-15T00:40:00+00:00, execution_date=20240715T004000, start_date=20240717T011838, end_date=20240717T011839
+[2024-07-17T01:18:39.881+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 526 for task etl_usd_mxn (SlackWebhookHook.__init__() missing 1 required keyword-only argument: 'slack_webhook_conn_id'; 29946)
+[2024-07-17T01:18:39.903+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-17T01:18:39.915+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-17T01:18:39.917+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

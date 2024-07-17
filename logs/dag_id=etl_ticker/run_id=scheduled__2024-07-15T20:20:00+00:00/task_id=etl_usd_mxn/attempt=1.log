@@ -1,0 +1,40 @@
+[2024-07-17T01:50:54.072+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-17T01:50:54.094+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_ticker.etl_usd_mxn scheduled__2024-07-15T20:20:00+00:00 [queued]>
+[2024-07-17T01:50:54.098+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_ticker.etl_usd_mxn scheduled__2024-07-15T20:20:00+00:00 [queued]>
+[2024-07-17T01:50:54.099+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-17T01:50:54.106+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): etl_usd_mxn> on 2024-07-15 20:20:00+00:00
+[2024-07-17T01:50:54.110+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=32681) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-17T01:50:54.111+0000] {standard_task_runner.py:63} INFO - Started process 32682 to run task
+[2024-07-17T01:50:54.110+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_ticker', 'etl_usd_mxn', 'scheduled__2024-07-15T20:20:00+00:00', '--job-id', '995', '--raw', '--subdir', 'DAGS_FOLDER/bid_ask_dag.py', '--cfg-path', '/tmp/tmp5d_g0v14']
+[2024-07-17T01:50:54.112+0000] {standard_task_runner.py:91} INFO - Job 995: Subtask etl_usd_mxn
+[2024-07-17T01:50:54.146+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_ticker.etl_usd_mxn scheduled__2024-07-15T20:20:00+00:00 [running]> on host 6f712de23803
+[2024-07-17T01:50:54.194+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_ticker' AIRFLOW_CTX_TASK_ID='etl_usd_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-15T20:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-15T20:20:00+00:00'
+[2024-07-17T01:50:54.195+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-17T01:50:54.206+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/600 [00:00<?, ?it/s]
+[2024-07-17T01:50:55.361+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:50:53+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:50:55.779+0000] {logging_mixin.py:188} WARNING -   0%|          | 1/600 [00:01<15:42,  1.57s/it]
+[2024-07-17T01:50:56.932+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:50:55+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:50:57.352+0000] {logging_mixin.py:188} WARNING -   0%|          | 2/600 [00:03<15:40,  1.57s/it]
+[2024-07-17T01:50:58.502+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:50:57+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:50:58.926+0000] {logging_mixin.py:188} WARNING -   0%|          | 3/600 [00:04<15:39,  1.57s/it]
+[2024-07-17T01:51:00.111+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:50:58+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:51:00.529+0000] {logging_mixin.py:188} WARNING -   1%|          | 4/600 [00:06<15:44,  1.58s/it]
+[2024-07-17T01:51:01.715+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:51:00+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:51:02.181+0000] {logging_mixin.py:188} WARNING -   1%|          | 5/600 [00:07<15:57,  1.61s/it]
+[2024-07-17T01:51:03.337+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:51:01+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:51:03.778+0000] {logging_mixin.py:188} WARNING -   1%|1         | 6/600 [00:09<15:53,  1.61s/it]
+[2024-07-17T01:51:04.937+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:51:03+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:51:05.350+0000] {logging_mixin.py:188} WARNING -   1%|1         | 7/600 [00:11<15:45,  1.59s/it]
+[2024-07-17T01:51:06.512+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:51:05+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:51:06.932+0000] {logging_mixin.py:188} WARNING -   1%|1         | 8/600 [00:12<15:41,  1.59s/it]
+[2024-07-17T01:51:08.084+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:51:06+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:51:08.494+0000] {logging_mixin.py:188} WARNING -   2%|1         | 9/600 [00:14<15:34,  1.58s/it]
+[2024-07-17T01:51:09.640+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:51:08+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:51:10.058+0000] {logging_mixin.py:188} WARNING -   2%|1         | 10/600 [00:15<15:29,  1.58s/it]
+[2024-07-17T01:51:11.216+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:51:09+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:51:11.641+0000] {logging_mixin.py:188} WARNING -   2%|1         | 11/600 [00:17<15:29,  1.58s/it]
+[2024-07-17T01:51:12.788+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:51:11+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:51:13.226+0000] {logging_mixin.py:188} WARNING -   2%|2         | 12/600 [00:19<15:29,  1.58s/it]
+[2024-07-17T01:51:14.397+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:51:12+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
+[2024-07-17T01:51:14.800+0000] {logging_mixin.py:188} WARNING -   2%|2         | 13/600 [00:20<15:26,  1.58s/it]
+[2024-07-17T01:51:15.950+0000] {bid_ask_dag.py:86} INFO - Threshold! {'orderbook_timestamp': '2024-07-17T01:51:14+00:00', 'book': 'usd_mxn', 'bid': 17.62, 'ask': 17.64, 'spread': 0.11337868480725381}
