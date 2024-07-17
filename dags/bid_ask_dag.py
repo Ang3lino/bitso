@@ -5,12 +5,14 @@ import requests
 
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
+from airflow.operators.dummy import DummyOperator
 # from airflow.providers.slack.hooks.slack_webhook import SlackWebhookHook
 # from airflow.providers.slack.operators.slack_webhook import SlackWebhookOperator
 
 from datetime import datetime, timedelta
 from spread_functions import fetch_ticker_data, compute_spread, save_to_partitioned_directory
 from tqdm import tqdm
+
 
 # Default arguments for the DAG
 default_args = {
@@ -90,6 +92,7 @@ def etl_spread(book: str) -> None:
     logging.info(f'Writing records gathered from {duration} seconds.')
     save_to_partitioned_directory(records, BASE_PATH, book)
 
+
 # Define the DAG for saving data every ten minutes
 with DAG(
     'etl_ticker',
@@ -97,11 +100,18 @@ with DAG(
     description='Save spread values every ten minutes',
     schedule_interval='*/10 * * * *',
 ) as dag:
-    for book in BOOKS:
-        fetch_task = PythonOperator(
+    
+    start_task = DummyOperator(task_id='start_task', dag=dag)
+    end_task = DummyOperator(task_id='end_task', dag=dag)
+
+    extract_transform_tasks = [
+        PythonOperator(
             task_id=f'etl_{book}',
             python_callable=etl_spread,
             op_args=[book],
             dag=dag
         )
-        fetch_task
+        for book in BOOKS
+    ]
+
+    start_task >> extract_transform_tasks >> end_task

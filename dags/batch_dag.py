@@ -1,9 +1,12 @@
+
 from airflow import DAG
 from airflow.operators.postgres_operator import PostgresOperator
+from airflow.operators.dummy import DummyOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 from datetime import datetime, timedelta
 import pandas as pd
+
 
 # Define the SQL queries to run
 queries = {
@@ -28,36 +31,9 @@ default_args = {
     'retry_delay': timedelta(minutes=1),
 }
 
-# Initialize the DAG
-dag = DAG(
-    'daily_batch',
-    default_args=default_args,
-    description='Daily ETL process',
-    schedule_interval='@daily',
-    template_searchpath=['/opt/airflow']
-)
-
 # PostgreSQL connection ID
 POSTGRES_CONN_ID = 'postgres_default'
 
-# Task to truncate data
-truncate_data = PostgresOperator(
-    task_id='truncate_data',
-    postgres_conn_id=POSTGRES_CONN_ID,  # Modify connection ID as per your setup
-    sql='sql/truncate.sql',
-    dag=dag,
-)
-
-# Task to insert data (users, currencies, statuses, deposits, withdrawals, events, and login events)
-insert_data = PostgresOperator(
-    task_id='insert_data',
-    postgres_conn_id=POSTGRES_CONN_ID,  # Modify connection ID as per your setup
-    sql='sql/migration.sql',
-    dag=dag,
-)
-
-# Define task dependencies
-truncate_data >> insert_data
 
 # Function to run a query and save the result to a CSV file
 def run_query_and_save_to_csv(query_id, query, **kwargs):
@@ -72,12 +48,45 @@ def run_query_and_save_to_csv(query_id, query, **kwargs):
     cursor.close()
     conn.close()
 
+
+# Initialize the DAG
+dag = DAG(
+    'daily_batch',
+    default_args=default_args,
+    description='Daily ETL process',
+    schedule_interval='@daily',
+    template_searchpath=['/opt/airflow']
+)
+
+start_task = DummyOperator(task_id='start_task', dag=dag)
+end_task = DummyOperator(task_id='end_task', dag=dag)
+
+# Task to truncate data
+truncate_data = PostgresOperator(
+    task_id='truncate_data',
+    postgres_conn_id=POSTGRES_CONN_ID,  # Modify connection ID as per your setup
+    sql='sql/truncate.sql',
+    dag=dag,
+)
+
+# Task to insert data (users, currencies, statuses, deposits, withdrawals, events, and login events)
+insert_source_data = PostgresOperator(
+    task_id='insert_data',
+    postgres_conn_id=POSTGRES_CONN_ID,  # Modify connection ID as per your setup
+    sql='sql/migration.sql',
+    dag=dag,
+)
+
 # Create tasks for each query
-for query_id, query in queries.items():
-    task = PythonOperator(
+query_insertions = [
+    PythonOperator(
         task_id=f'run_{query_id}',
         python_callable=run_query_and_save_to_csv,
         op_args=[query_id, query],
         dag=dag,
     )
-    insert_data >> task
+    for query_id, query in queries.items()
+]
+
+# Define task dependencies
+start_task >> truncate_data >> insert_source_data >> [*query_insertions] >> end_task
