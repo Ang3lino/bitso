@@ -4,6 +4,8 @@ import sys
 
 from unittest.mock import patch, mock_open
 
+
+# we expect to run this outside the current script location to use same helper functions
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.abspath(os.path.join(TEST_DIR, os.pardir))
 sys.path.insert(0, PROJECT_DIR)
@@ -88,5 +90,3 @@ def test_save_to_partitioned_directory(mocker, mock_spread_data):
 
     handle = open()
     handle.write.assert_called()  # Ensure that write was called
-
-

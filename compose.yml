@@ -1,3 +1,4 @@
+
 # Common configuration for Spark services
 x-spark-common: &spark-common
   image: bitnami/spark:latest  # Use the latest Bitnami Spark image

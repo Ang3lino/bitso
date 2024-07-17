@@ -1,5 +1,4 @@
 
-
 CREATE SCHEMA target;
 
 -- User Table

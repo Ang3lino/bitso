@@ -50,11 +50,17 @@ To achieve these goals, we have refined the database schema as follows:
 - Optimized data model is outlined in `sql/new_model.sql`.
 - Introduced a `target` schema to store data extracted from the initial snapshot files.
 - Introduced a `target.login_event` table to save only login events (denormalize step).
+- Type from base_transaction could be removed but it is useful to distiguish their subclasses.
 
 The new model includes:
 - **Categorical Tables**: `target.user`, `target.currency`, and `target.tx_status` for storing user-related data, currency information, and transaction statuses (We could have used enumeration type too).
 - **Base Tables**: Utilization of inheritance (`base_*` tables) to streamline attributes common across multiple entities.
 - **Primary and Foreign Keys**: Ensuring data integrity and facilitating efficient querying.
+
+![ER Diagram](sql/bitso.pgerd.jpeg "Entity-Relationship Diagram")
+
+Note: in the diagram, deposit and withdrawal are disjoint subclasses of base_transaction and their attributes are non-repetitive, similarly with base_event. This is not represented by pgAdmin generation tool.
+
 
 ### Data Migration
 Data migration from the original snapshot tables to the optimized schema (`target`) is managed through `sql/migration.sql`. This script ensures seamless transfer while adhering to the new data model's structure.
