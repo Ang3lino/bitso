@@ -6,13 +6,9 @@ import requests
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.dummy import DummyOperator
-# from airflow.providers.slack.hooks.slack_webhook import SlackWebhookHook
-# from airflow.providers.slack.operators.slack_webhook import SlackWebhookOperator
-
 from datetime import datetime, timedelta
 from spread_functions import fetch_ticker_data, compute_spread, save_to_partitioned_directory
 from tqdm import tqdm
-
 
 # Default arguments for the DAG
 default_args = {
@@ -29,7 +25,6 @@ BOOKS = ["btc_mxn", "usd_mxn"]
 BASE_PATH = '/opt/airflow/bucket/get_ticker'
 WEBHOOK_URL = "https://hooks.slack.com/services/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"
 
-
 def emit_alarm(record: dict):
     """
     Sends an alarm (notification) using a webhook if a specific condition is met.
@@ -37,14 +32,17 @@ def emit_alarm(record: dict):
     Parameters:
         record (dict): The record that triggered the alarm.
     """
-    message = {
-        "text": f"Alert! Spread exceeded threshold: {record}",
-    }
-    response = requests.post(WEBHOOK_URL, json=message)
-    if response.status_code != 200:
-        logging.error(
-            f"Request to webhook returned an error {response.status_code}, the response is: {response.text}"
-        )
+    try:
+        message = {
+            "text": f"Alert! Spread exceeded threshold: {record}",
+        }
+        response = requests.post(WEBHOOK_URL, json=message)
+        if response.status_code != 200:
+            logging.error(
+                f"Request to webhook returned an error {response.status_code}, the response is: {response.text}"
+            )
+    except Exception as e:
+        logging.error(f"Error sending alarm: {str(e)}")
 
 def trigger_fetch_and_compute(book: str, debug: bool = True) -> dict:
     """
@@ -57,16 +55,19 @@ def trigger_fetch_and_compute(book: str, debug: bool = True) -> dict:
     Returns:
         dict: The spread record.
     """
-    data = fetch_ticker_data(book)
-    if debug:
-        logging.info(f'Data fetched for book {book}')
-        logging.info(data)
-    if data and data['success']:
-        spread_record = compute_spread(data['payload'])
+    try:
+        data = fetch_ticker_data(book)
         if debug:
-            logging.info('Spread computed')
-            logging.info(spread_record)
-        return spread_record
+            logging.info(f'Data fetched for book {book}')
+            logging.info(data)
+        if data and data['success']:
+            spread_record = compute_spread(data['payload'])
+            if debug:
+                logging.info('Spread computed')
+                logging.info(spread_record)
+            return spread_record
+    except Exception as e:
+        logging.error(f"Error fetching and computing spread for book {book}: {str(e)}")
     return None
 
 def etl_spread(book: str) -> None:
@@ -76,22 +77,24 @@ def etl_spread(book: str) -> None:
     Parameters:
         book (str): The book to fetch data for.
     """
-    duration = 10 * 60  # 10 minutes in seconds
-    records = []
+    try:
+        duration = 10 * 60  # 10 minutes in seconds
+        records = []
 
-    for _ in tqdm(range(duration)):
-        record = trigger_fetch_and_compute(book, debug=False)
-        time.sleep(1)  # Wait for 1 second
-        if record:
-            records.append(record)
-            if record['spread'] > SPREAD_THRESHOLD:  # in case exceed threshold we notify
-                logging.info(f"Threshold! {record}")
-                # SlackWebhookHook(webhook_token=WEBHOOK_URL, message=f"Alert! bid-ask has appeared {record}").execute()
-                emit_alarm(record)
-    
-    logging.info(f'Writing records gathered from {duration} seconds.')
-    save_to_partitioned_directory(records, BASE_PATH, book)
-
+        for _ in tqdm(range(duration)):
+            record = trigger_fetch_and_compute(book, debug=False)
+            time.sleep(1)  # Wait for 1 second
+            if record:
+                records.append(record)
+                if record['spread'] > SPREAD_THRESHOLD:  # in case exceed threshold we notify
+                    logging.info(f"Threshold! {record}")
+                    # SlackWebhookHook(webhook_token=WEBHOOK_URL, message=f"Alert! bid-ask has appeared {record}").execute()
+                    emit_alarm(record)
+        
+        logging.info(f'Writing records gathered from {duration} seconds.')
+        save_to_partitioned_directory(records, BASE_PATH, book)
+    except Exception as e:
+        logging.error(f"Error in ETL process for book {book}: {str(e)}")
 
 # Define the DAG for saving data every ten minutes
 with DAG(

@@ -1226,3 +1226,477 @@
 [2024-07-16T23:08:26.947+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
 [2024-07-16T23:08:26.962+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
 [2024-07-16T23:08:26.963+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-07-18T03:00:30.101+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-18T03:00:30.118+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_ticker.etl_usd_mxn scheduled__2024-07-14T04:40:00+00:00 [queued]>
+[2024-07-18T03:00:30.122+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_ticker.etl_usd_mxn scheduled__2024-07-14T04:40:00+00:00 [queued]>
+[2024-07-18T03:00:30.122+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-18T03:00:30.130+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): etl_usd_mxn> on 2024-07-14 04:40:00+00:00
+[2024-07-18T03:00:30.134+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=4687) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-18T03:00:30.135+0000] {standard_task_runner.py:63} INFO - Started process 4688 to run task
+[2024-07-18T03:00:30.134+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_ticker', 'etl_usd_mxn', 'scheduled__2024-07-14T04:40:00+00:00', '--job-id', '2559', '--raw', '--subdir', 'DAGS_FOLDER/bid_ask_dag.py', '--cfg-path', '/tmp/tmpn8zxeavf']
+[2024-07-18T03:00:30.136+0000] {standard_task_runner.py:91} INFO - Job 2559: Subtask etl_usd_mxn
+[2024-07-18T03:00:30.143+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-18T03:00:30.159+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_ticker.etl_usd_mxn scheduled__2024-07-14T04:40:00+00:00 [running]> on host 3a23888a6869
+[2024-07-18T03:00:30.205+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_ticker' AIRFLOW_CTX_TASK_ID='etl_usd_mxn' AIRFLOW_CTX_EXECUTION_DATE='2024-07-14T04:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-14T04:40:00+00:00'
+[2024-07-18T03:00:30.207+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-18T03:00:30.224+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/600 [00:00<?, ?it/s]
+[2024-07-18T03:00:31.374+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:30+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:31.627+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:31.633+0000] {logging_mixin.py:188} WARNING -   0%|          | 1/600 [00:01<14:03,  1.41s/it]
+[2024-07-18T03:00:32.789+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:31+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:33.047+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:33.048+0000] {logging_mixin.py:188} WARNING -   0%|          | 2/600 [00:02<14:04,  1.41s/it]
+[2024-07-18T03:00:34.214+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:33+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:34.455+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:34.456+0000] {logging_mixin.py:188} WARNING -   0%|          | 3/600 [00:04<14:01,  1.41s/it]
+[2024-07-18T03:00:35.652+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:34+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:35.886+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:35.888+0000] {logging_mixin.py:188} WARNING -   1%|          | 4/600 [00:05<14:05,  1.42s/it]
+[2024-07-18T03:00:37.046+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:35+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:37.325+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:37.327+0000] {logging_mixin.py:188} WARNING -   1%|          | 5/600 [00:07<14:08,  1.43s/it]
+[2024-07-18T03:00:38.496+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:37+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:38.746+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:38.749+0000] {logging_mixin.py:188} WARNING -   1%|1         | 6/600 [00:08<14:06,  1.42s/it]
+[2024-07-18T03:00:39.924+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:38+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:40.200+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:40.202+0000] {logging_mixin.py:188} WARNING -   1%|1         | 7/600 [00:09<14:10,  1.43s/it]
+[2024-07-18T03:00:41.348+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:40+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:41.578+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:41.579+0000] {logging_mixin.py:188} WARNING -   1%|1         | 8/600 [00:11<13:58,  1.42s/it]
+[2024-07-18T03:00:42.747+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:41+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:42.990+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:42.991+0000] {logging_mixin.py:188} WARNING -   2%|1         | 9/600 [00:12<13:56,  1.41s/it]
+[2024-07-18T03:00:44.149+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:43+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:44.391+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:44.392+0000] {logging_mixin.py:188} WARNING -   2%|1         | 10/600 [00:14<13:52,  1.41s/it]
+[2024-07-18T03:00:45.533+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:44+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:45.863+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:45.864+0000] {logging_mixin.py:188} WARNING -   2%|1         | 11/600 [00:15<14:01,  1.43s/it]
+[2024-07-18T03:00:47.047+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:45+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:47.275+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:47.277+0000] {logging_mixin.py:188} WARNING -   2%|2         | 12/600 [00:17<13:57,  1.42s/it]
+[2024-07-18T03:00:48.426+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:47+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:48.663+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:48.664+0000] {logging_mixin.py:188} WARNING -   2%|2         | 13/600 [00:18<13:49,  1.41s/it]
+[2024-07-18T03:00:49.818+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:48+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:50.046+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:50.047+0000] {logging_mixin.py:188} WARNING -   2%|2         | 14/600 [00:19<13:42,  1.40s/it]
+[2024-07-18T03:00:51.269+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:50+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:51.496+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:51.498+0000] {logging_mixin.py:188} WARNING -   2%|2         | 15/600 [00:21<13:49,  1.42s/it]
+[2024-07-18T03:00:52.656+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:51+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:52.892+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:52.893+0000] {logging_mixin.py:188} WARNING -   3%|2         | 16/600 [00:22<13:44,  1.41s/it]
+[2024-07-18T03:00:54.052+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:52+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:54.286+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:54.288+0000] {logging_mixin.py:188} WARNING -   3%|2         | 17/600 [00:24<13:39,  1.41s/it]
+[2024-07-18T03:00:55.447+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:54+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:55.683+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:55.684+0000] {logging_mixin.py:188} WARNING -   3%|3         | 18/600 [00:25<13:36,  1.40s/it]
+[2024-07-18T03:00:56.837+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:55+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:57.058+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:57.059+0000] {logging_mixin.py:188} WARNING -   3%|3         | 19/600 [00:26<13:30,  1.39s/it]
+[2024-07-18T03:00:58.204+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:57+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:58.523+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:58.525+0000] {logging_mixin.py:188} WARNING -   3%|3         | 20/600 [00:28<13:41,  1.42s/it]
+[2024-07-18T03:00:59.694+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:58+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:00:59.933+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:00:59.934+0000] {logging_mixin.py:188} WARNING -   4%|3         | 21/600 [00:29<13:38,  1.41s/it]
+[2024-07-18T03:01:01.107+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:00:59+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:01.335+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:01.336+0000] {logging_mixin.py:188} WARNING -   4%|3         | 22/600 [00:31<13:35,  1.41s/it]
+[2024-07-18T03:01:02.502+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:01+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:02.737+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:02.738+0000] {logging_mixin.py:188} WARNING -   4%|3         | 23/600 [00:32<13:32,  1.41s/it]
+[2024-07-18T03:01:03.928+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:02+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:04.158+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:04.159+0000] {logging_mixin.py:188} WARNING -   4%|4         | 24/600 [00:33<13:33,  1.41s/it]
+[2024-07-18T03:01:05.314+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:04+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:05.544+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:05.546+0000] {logging_mixin.py:188} WARNING -   4%|4         | 25/600 [00:35<13:27,  1.40s/it]
+[2024-07-18T03:01:06.705+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:05+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:06.931+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:06.933+0000] {logging_mixin.py:188} WARNING -   4%|4         | 26/600 [00:36<13:23,  1.40s/it]
+[2024-07-18T03:01:08.104+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:06+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:08.331+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:08.332+0000] {logging_mixin.py:188} WARNING -   4%|4         | 27/600 [00:38<13:21,  1.40s/it]
+[2024-07-18T03:01:09.484+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:08+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:09.719+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:09.720+0000] {logging_mixin.py:188} WARNING -   5%|4         | 28/600 [00:39<13:18,  1.40s/it]
+[2024-07-18T03:01:10.881+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:09+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:11.111+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:11.113+0000] {logging_mixin.py:188} WARNING -   5%|4         | 29/600 [00:40<13:16,  1.39s/it]
+[2024-07-18T03:01:12.290+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:11+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:12.519+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:12.520+0000] {logging_mixin.py:188} WARNING -   5%|5         | 30/600 [00:42<13:17,  1.40s/it]
+[2024-07-18T03:01:13.707+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:12+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:13.955+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:13.956+0000] {logging_mixin.py:188} WARNING -   5%|5         | 31/600 [00:43<13:22,  1.41s/it]
+[2024-07-18T03:01:15.112+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:13+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:15.346+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:15.347+0000] {logging_mixin.py:188} WARNING -   5%|5         | 32/600 [00:45<13:17,  1.40s/it]
+[2024-07-18T03:01:16.537+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:15+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:16.767+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:16.768+0000] {logging_mixin.py:188} WARNING -   6%|5         | 33/600 [00:46<13:19,  1.41s/it]
+[2024-07-18T03:01:17.932+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:16+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:18.172+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:18.173+0000] {logging_mixin.py:188} WARNING -   6%|5         | 34/600 [00:47<13:16,  1.41s/it]
+[2024-07-18T03:01:19.354+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:18+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:19.580+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:19.581+0000] {logging_mixin.py:188} WARNING -   6%|5         | 35/600 [00:49<13:15,  1.41s/it]
+[2024-07-18T03:01:20.729+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:19+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:21.027+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:21.028+0000] {logging_mixin.py:188} WARNING -   6%|6         | 36/600 [00:50<13:20,  1.42s/it]
+[2024-07-18T03:01:22.199+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:21+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:22.472+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:22.477+0000] {logging_mixin.py:188} WARNING -   6%|6         | 37/600 [00:52<13:24,  1.43s/it]
+[2024-07-18T03:01:23.647+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:22+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:23.917+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:23.919+0000] {logging_mixin.py:188} WARNING -   6%|6         | 38/600 [00:53<13:25,  1.43s/it]
+[2024-07-18T03:01:25.070+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:23+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:25.302+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:25.318+0000] {logging_mixin.py:188} WARNING -   6%|6         | 39/600 [00:55<13:17,  1.42s/it]
+[2024-07-18T03:01:26.490+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:25+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:26.725+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:26.726+0000] {logging_mixin.py:188} WARNING -   7%|6         | 40/600 [00:56<13:14,  1.42s/it]
+[2024-07-18T03:01:27.879+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:26+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:28.112+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:28.113+0000] {logging_mixin.py:188} WARNING -   7%|6         | 41/600 [00:57<13:07,  1.41s/it]
+[2024-07-18T03:01:29.289+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:28+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:29.599+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:29.603+0000] {logging_mixin.py:188} WARNING -   7%|7         | 42/600 [00:59<13:19,  1.43s/it]
+[2024-07-18T03:01:30.751+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:29+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:31.036+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:31.038+0000] {logging_mixin.py:188} WARNING -   7%|7         | 43/600 [01:00<13:18,  1.43s/it]
+[2024-07-18T03:01:32.198+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:31+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:32.445+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:32.447+0000] {logging_mixin.py:188} WARNING -   7%|7         | 44/600 [01:02<13:13,  1.43s/it]
+[2024-07-18T03:01:33.609+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:32+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:33.848+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:33.849+0000] {logging_mixin.py:188} WARNING -   8%|7         | 45/600 [01:03<13:07,  1.42s/it]
+[2024-07-18T03:01:35.007+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:33+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:35.242+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:35.243+0000] {logging_mixin.py:188} WARNING -   8%|7         | 46/600 [01:05<13:01,  1.41s/it]
+[2024-07-18T03:01:36.403+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:35+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:36.645+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:36.646+0000] {logging_mixin.py:188} WARNING -   8%|7         | 47/600 [01:06<12:59,  1.41s/it]
+[2024-07-18T03:01:37.804+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:36+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:38.026+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:38.028+0000] {logging_mixin.py:188} WARNING -   8%|8         | 48/600 [01:07<12:53,  1.40s/it]
+[2024-07-18T03:01:39.178+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:38+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:39.419+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:39.420+0000] {logging_mixin.py:188} WARNING -   8%|8         | 49/600 [01:09<12:50,  1.40s/it]
+[2024-07-18T03:01:40.582+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:39+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:40.814+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:40.816+0000] {logging_mixin.py:188} WARNING -   8%|8         | 50/600 [01:10<12:48,  1.40s/it]
+[2024-07-18T03:01:41.969+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:40+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:42.199+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:42.200+0000] {logging_mixin.py:188} WARNING -   8%|8         | 51/600 [01:11<12:45,  1.39s/it]
+[2024-07-18T03:01:43.348+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:42+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:43.572+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:43.573+0000] {logging_mixin.py:188} WARNING -   9%|8         | 52/600 [01:13<12:40,  1.39s/it]
+[2024-07-18T03:01:44.717+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:43+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:44.966+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:44.970+0000] {logging_mixin.py:188} WARNING -   9%|8         | 53/600 [01:14<12:40,  1.39s/it]
+[2024-07-18T03:01:46.128+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:44+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:46.369+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:46.370+0000] {logging_mixin.py:188} WARNING -   9%|9         | 54/600 [01:16<12:40,  1.39s/it]
+[2024-07-18T03:01:47.526+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:46+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:47.750+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:47.751+0000] {logging_mixin.py:188} WARNING -   9%|9         | 55/600 [01:17<12:37,  1.39s/it]
+[2024-07-18T03:01:48.917+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:47+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:49.198+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:49.202+0000] {logging_mixin.py:188} WARNING -   9%|9         | 56/600 [01:18<12:45,  1.41s/it]
+[2024-07-18T03:01:50.360+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:49+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:50.594+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:50.595+0000] {logging_mixin.py:188} WARNING -  10%|9         | 57/600 [01:20<12:42,  1.40s/it]
+[2024-07-18T03:01:51.756+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:50+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:51.992+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:51.995+0000] {logging_mixin.py:188} WARNING -  10%|9         | 58/600 [01:21<12:40,  1.40s/it]
+[2024-07-18T03:01:53.174+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:52+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:53.416+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:53.417+0000] {logging_mixin.py:188} WARNING -  10%|9         | 59/600 [01:23<12:41,  1.41s/it]
+[2024-07-18T03:01:54.594+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:53+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:54.842+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:54.843+0000] {logging_mixin.py:188} WARNING -  10%|#         | 60/600 [01:24<12:43,  1.41s/it]
+[2024-07-18T03:01:55.996+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:54+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:56.243+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:56.248+0000] {logging_mixin.py:188} WARNING -  10%|#         | 61/600 [01:26<12:40,  1.41s/it]
+[2024-07-18T03:01:57.416+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:56+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:57.656+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:57.657+0000] {logging_mixin.py:188} WARNING -  10%|#         | 62/600 [01:27<12:38,  1.41s/it]
+[2024-07-18T03:01:58.857+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:57+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:01:59.090+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:01:59.093+0000] {logging_mixin.py:188} WARNING -  10%|#         | 63/600 [01:28<12:41,  1.42s/it]
+[2024-07-18T03:02:00.237+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:01:59+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:00.468+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:00.469+0000] {logging_mixin.py:188} WARNING -  11%|#         | 64/600 [01:30<12:33,  1.41s/it]
+[2024-07-18T03:02:01.689+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:00+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:01.930+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:01.932+0000] {logging_mixin.py:188} WARNING -  11%|#         | 65/600 [01:31<12:41,  1.42s/it]
+[2024-07-18T03:02:03.092+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:01+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:03.315+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:03.316+0000] {logging_mixin.py:188} WARNING -  11%|#1        | 66/600 [01:33<12:33,  1.41s/it]
+[2024-07-18T03:02:04.494+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:03+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:04.728+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:04.729+0000] {logging_mixin.py:188} WARNING -  11%|#1        | 67/600 [01:34<12:32,  1.41s/it]
+[2024-07-18T03:02:05.929+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:04+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:06.179+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:06.180+0000] {logging_mixin.py:188} WARNING -  11%|#1        | 68/600 [01:35<12:37,  1.42s/it]
+[2024-07-18T03:02:07.332+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:06+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:07.584+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:07.586+0000] {logging_mixin.py:188} WARNING -  12%|#1        | 69/600 [01:37<12:33,  1.42s/it]
+[2024-07-18T03:02:08.782+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:07+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:09.021+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:09.022+0000] {logging_mixin.py:188} WARNING -  12%|#1        | 70/600 [01:38<12:34,  1.42s/it]
+[2024-07-18T03:02:10.196+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:09+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:10.432+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:10.433+0000] {logging_mixin.py:188} WARNING -  12%|#1        | 71/600 [01:40<12:31,  1.42s/it]
+[2024-07-18T03:02:11.600+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:10+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:11.833+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:11.839+0000] {logging_mixin.py:188} WARNING -  12%|#2        | 72/600 [01:41<12:27,  1.42s/it]
+[2024-07-18T03:02:12.987+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:11+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:13.225+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:13.228+0000] {logging_mixin.py:188} WARNING -  12%|#2        | 73/600 [01:43<12:21,  1.41s/it]
+[2024-07-18T03:02:14.396+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:13+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:14.641+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:14.642+0000] {logging_mixin.py:188} WARNING -  12%|#2        | 74/600 [01:44<12:21,  1.41s/it]
+[2024-07-18T03:02:15.811+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:14+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:16.051+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:16.053+0000] {logging_mixin.py:188} WARNING -  12%|#2        | 75/600 [01:45<12:20,  1.41s/it]
+[2024-07-18T03:02:17.226+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:16+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:17.453+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:17.454+0000] {logging_mixin.py:188} WARNING -  13%|#2        | 76/600 [01:47<12:17,  1.41s/it]
+[2024-07-18T03:02:18.630+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:17+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:18.858+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:18.859+0000] {logging_mixin.py:188} WARNING -  13%|#2        | 77/600 [01:48<12:15,  1.41s/it]
+[2024-07-18T03:02:20.085+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:18+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:20.312+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:20.313+0000] {logging_mixin.py:188} WARNING -  13%|#3        | 78/600 [01:50<12:21,  1.42s/it]
+[2024-07-18T03:02:21.464+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:20+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:21.689+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:21.691+0000] {logging_mixin.py:188} WARNING -  13%|#3        | 79/600 [01:51<12:13,  1.41s/it]
+[2024-07-18T03:02:22.848+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:21+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:23.078+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:23.079+0000] {logging_mixin.py:188} WARNING -  13%|#3        | 80/600 [01:52<12:09,  1.40s/it]
+[2024-07-18T03:02:24.255+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:23+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:24.506+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:24.508+0000] {logging_mixin.py:188} WARNING -  14%|#3        | 81/600 [01:54<12:11,  1.41s/it]
+[2024-07-18T03:02:25.669+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:24+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:25.905+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:25.906+0000] {logging_mixin.py:188} WARNING -  14%|#3        | 82/600 [01:55<12:08,  1.41s/it]
+[2024-07-18T03:02:27.048+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:25+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:27.272+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:27.274+0000] {logging_mixin.py:188} WARNING -  14%|#3        | 83/600 [01:57<12:01,  1.39s/it]
+[2024-07-18T03:02:28.432+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:27+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:28.658+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:28.660+0000] {logging_mixin.py:188} WARNING -  14%|#4        | 84/600 [01:58<11:58,  1.39s/it]
+[2024-07-18T03:02:29.825+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:28+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:30.073+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:30.076+0000] {logging_mixin.py:188} WARNING -  14%|#4        | 85/600 [01:59<12:00,  1.40s/it]
+[2024-07-18T03:02:31.237+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:30+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:31.475+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:31.479+0000] {logging_mixin.py:188} WARNING -  14%|#4        | 86/600 [02:01<11:59,  1.40s/it]
+[2024-07-18T03:02:32.640+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:31+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:32.874+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:32.875+0000] {logging_mixin.py:188} WARNING -  14%|#4        | 87/600 [02:02<11:57,  1.40s/it]
+[2024-07-18T03:02:34.032+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:32+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:34.266+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:34.267+0000] {logging_mixin.py:188} WARNING -  15%|#4        | 88/600 [02:04<11:55,  1.40s/it]
+[2024-07-18T03:02:35.430+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:34+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:35.676+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:35.679+0000] {logging_mixin.py:188} WARNING -  15%|#4        | 89/600 [02:05<11:56,  1.40s/it]
+[2024-07-18T03:02:36.826+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:35+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:37.061+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:37.062+0000] {logging_mixin.py:188} WARNING -  15%|#5        | 90/600 [02:06<11:51,  1.40s/it]
+[2024-07-18T03:02:38.207+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:37+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:38.432+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:38.434+0000] {logging_mixin.py:188} WARNING -  15%|#5        | 91/600 [02:08<11:46,  1.39s/it]
+[2024-07-18T03:02:39.587+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:38+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:39.816+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:39.817+0000] {logging_mixin.py:188} WARNING -  15%|#5        | 92/600 [02:09<11:44,  1.39s/it]
+[2024-07-18T03:02:40.968+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:39+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:41.200+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:41.201+0000] {logging_mixin.py:188} WARNING -  16%|#5        | 93/600 [02:10<11:42,  1.39s/it]
+[2024-07-18T03:02:42.355+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:41+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:42.591+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:42.593+0000] {logging_mixin.py:188} WARNING -  16%|#5        | 94/600 [02:12<11:42,  1.39s/it]
+[2024-07-18T03:02:43.748+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:42+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:43.985+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:43.986+0000] {logging_mixin.py:188} WARNING -  16%|#5        | 95/600 [02:13<11:41,  1.39s/it]
+[2024-07-18T03:02:45.132+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:43+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:45.381+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:45.382+0000] {logging_mixin.py:188} WARNING -  16%|#6        | 96/600 [02:15<11:41,  1.39s/it]
+[2024-07-18T03:02:46.536+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:45+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:46.775+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:46.776+0000] {logging_mixin.py:188} WARNING -  16%|#6        | 97/600 [02:16<11:40,  1.39s/it]
+[2024-07-18T03:02:47.959+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:46+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:48.194+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:48.195+0000] {logging_mixin.py:188} WARNING -  16%|#6        | 98/600 [02:17<11:42,  1.40s/it]
+[2024-07-18T03:02:49.347+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:48+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:49.582+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:49.584+0000] {logging_mixin.py:188} WARNING -  16%|#6        | 99/600 [02:19<11:39,  1.40s/it]
+[2024-07-18T03:02:50.752+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:49+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:51.076+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:51.079+0000] {logging_mixin.py:188} WARNING -  17%|#6        | 100/600 [02:20<11:53,  1.43s/it]
+[2024-07-18T03:02:52.249+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:51+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:52.484+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:52.486+0000] {logging_mixin.py:188} WARNING -  17%|#6        | 101/600 [02:22<11:48,  1.42s/it]
+[2024-07-18T03:02:53.648+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:52+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:53.927+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:53.928+0000] {logging_mixin.py:188} WARNING -  17%|#7        | 102/600 [02:23<11:50,  1.43s/it]
+[2024-07-18T03:02:55.068+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:53+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:55.306+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:55.308+0000] {logging_mixin.py:188} WARNING -  17%|#7        | 103/600 [02:25<11:42,  1.41s/it]
+[2024-07-18T03:02:56.505+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:55+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:56.730+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:56.732+0000] {logging_mixin.py:188} WARNING -  17%|#7        | 104/600 [02:26<11:42,  1.42s/it]
+[2024-07-18T03:02:57.892+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:56+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:58.140+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:58.156+0000] {logging_mixin.py:188} WARNING -  18%|#7        | 105/600 [02:27<11:42,  1.42s/it]
+[2024-07-18T03:02:59.322+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:58+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:02:59.554+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:02:59.556+0000] {logging_mixin.py:188} WARNING -  18%|#7        | 106/600 [02:29<11:38,  1.41s/it]
+[2024-07-18T03:03:00.718+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:02:59+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:00.952+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:00.953+0000] {logging_mixin.py:188} WARNING -  18%|#7        | 107/600 [02:30<11:34,  1.41s/it]
+[2024-07-18T03:03:02.127+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:00+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:02.363+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:02.364+0000] {logging_mixin.py:188} WARNING -  18%|#8        | 108/600 [02:32<11:33,  1.41s/it]
+[2024-07-18T03:03:03.511+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:02+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:03.743+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:03.745+0000] {logging_mixin.py:188} WARNING -  18%|#8        | 109/600 [02:33<11:27,  1.40s/it]
+[2024-07-18T03:03:04.913+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:03+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:05.159+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:05.160+0000] {logging_mixin.py:188} WARNING -  18%|#8        | 110/600 [02:34<11:28,  1.40s/it]
+[2024-07-18T03:03:06.313+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:05+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:06.550+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:06.552+0000] {logging_mixin.py:188} WARNING -  18%|#8        | 111/600 [02:36<11:25,  1.40s/it]
+[2024-07-18T03:03:07.721+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:06+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:07.984+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:08.012+0000] {logging_mixin.py:188} WARNING -  19%|#8        | 112/600 [02:37<11:32,  1.42s/it]
+[2024-07-18T03:03:09.180+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:08+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:09.438+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:09.439+0000] {logging_mixin.py:188} WARNING -  19%|#8        | 113/600 [02:39<11:32,  1.42s/it]
+[2024-07-18T03:03:10.608+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:09+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:10.845+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:10.851+0000] {logging_mixin.py:188} WARNING -  19%|#9        | 114/600 [02:40<11:29,  1.42s/it]
+[2024-07-18T03:03:12.028+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:10+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:12.265+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:12.267+0000] {logging_mixin.py:188} WARNING -  19%|#9        | 115/600 [02:42<11:27,  1.42s/it]
+[2024-07-18T03:03:13.446+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:12+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:13.683+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:13.684+0000] {logging_mixin.py:188} WARNING -  19%|#9        | 116/600 [02:43<11:26,  1.42s/it]
+[2024-07-18T03:03:14.835+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:13+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:15.066+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:15.067+0000] {logging_mixin.py:188} WARNING -  20%|#9        | 117/600 [02:44<11:19,  1.41s/it]
+[2024-07-18T03:03:16.225+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:15+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:16.503+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:16.504+0000] {logging_mixin.py:188} WARNING -  20%|#9        | 118/600 [02:46<11:22,  1.42s/it]
+[2024-07-18T03:03:17.651+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:16+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:17.878+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:17.880+0000] {logging_mixin.py:188} WARNING -  20%|#9        | 119/600 [02:47<11:15,  1.40s/it]
+[2024-07-18T03:03:19.078+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:17+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:19.304+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:19.306+0000] {logging_mixin.py:188} WARNING -  20%|##        | 120/600 [02:49<11:17,  1.41s/it]
+[2024-07-18T03:03:20.459+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:19+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:20.688+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:20.689+0000] {logging_mixin.py:188} WARNING -  20%|##        | 121/600 [02:50<11:11,  1.40s/it]
+[2024-07-18T03:03:21.859+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:20+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:22.083+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:22.085+0000] {logging_mixin.py:188} WARNING -  20%|##        | 122/600 [02:51<11:09,  1.40s/it]
+[2024-07-18T03:03:23.287+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:22+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:23.517+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:23.519+0000] {logging_mixin.py:188} WARNING -  20%|##        | 123/600 [02:53<11:12,  1.41s/it]
+[2024-07-18T03:03:24.670+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:23+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:24.902+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:24.904+0000] {logging_mixin.py:188} WARNING -  21%|##        | 124/600 [02:54<11:07,  1.40s/it]
+[2024-07-18T03:03:26.056+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:24+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:26.329+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:26.331+0000] {logging_mixin.py:188} WARNING -  21%|##        | 125/600 [02:56<11:09,  1.41s/it]
+[2024-07-18T03:03:27.511+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:26+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:27.736+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:27.737+0000] {logging_mixin.py:188} WARNING -  21%|##1       | 126/600 [02:57<11:07,  1.41s/it]
+[2024-07-18T03:03:28.917+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:27+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:29.162+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:29.163+0000] {logging_mixin.py:188} WARNING -  21%|##1       | 127/600 [02:58<11:08,  1.41s/it]
+[2024-07-18T03:03:30.317+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:29+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:30.546+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:30.547+0000] {logging_mixin.py:188} WARNING -  21%|##1       | 128/600 [03:00<11:03,  1.41s/it]
+[2024-07-18T03:03:31.727+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:30+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:31.958+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:31.959+0000] {logging_mixin.py:188} WARNING -  22%|##1       | 129/600 [03:01<11:02,  1.41s/it]
+[2024-07-18T03:03:33.106+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:31+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:33.334+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:33.335+0000] {logging_mixin.py:188} WARNING -  22%|##1       | 130/600 [03:03<10:56,  1.40s/it]
+[2024-07-18T03:03:34.515+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:33+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:34.751+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:34.753+0000] {logging_mixin.py:188} WARNING -  22%|##1       | 131/600 [03:04<10:58,  1.40s/it]
+[2024-07-18T03:03:35.902+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:34+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:36.132+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:36.133+0000] {logging_mixin.py:188} WARNING -  22%|##2       | 132/600 [03:05<10:53,  1.40s/it]
+[2024-07-18T03:03:37.278+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:36+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:37.516+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:37.517+0000] {logging_mixin.py:188} WARNING -  22%|##2       | 133/600 [03:07<10:50,  1.39s/it]
+[2024-07-18T03:03:38.687+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:37+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:38.906+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:38.907+0000] {logging_mixin.py:188} WARNING -  22%|##2       | 134/600 [03:08<10:48,  1.39s/it]
+[2024-07-18T03:03:40.058+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:38+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:40.297+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:40.299+0000] {logging_mixin.py:188} WARNING -  22%|##2       | 135/600 [03:10<10:47,  1.39s/it]
+[2024-07-18T03:03:41.444+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:40+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:41.701+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:41.703+0000] {logging_mixin.py:188} WARNING -  23%|##2       | 136/600 [03:11<10:47,  1.40s/it]
+[2024-07-18T03:03:42.848+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:41+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:43.079+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:43.080+0000] {logging_mixin.py:188} WARNING -  23%|##2       | 137/600 [03:12<10:43,  1.39s/it]
+[2024-07-18T03:03:44.234+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:43+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:44.497+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:44.499+0000] {logging_mixin.py:188} WARNING -  23%|##3       | 138/600 [03:14<10:46,  1.40s/it]
+[2024-07-18T03:03:45.676+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:44+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:45.914+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:45.915+0000] {logging_mixin.py:188} WARNING -  23%|##3       | 139/600 [03:15<10:47,  1.40s/it]
+[2024-07-18T03:03:47.088+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:45+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:47.340+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:47.342+0000] {logging_mixin.py:188} WARNING -  23%|##3       | 140/600 [03:17<10:48,  1.41s/it]
+[2024-07-18T03:03:48.488+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:47+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:48.728+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:48.729+0000] {logging_mixin.py:188} WARNING -  24%|##3       | 141/600 [03:18<10:44,  1.40s/it]
+[2024-07-18T03:03:49.888+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:48+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:50.139+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:50.186+0000] {logging_mixin.py:188} WARNING -  24%|##3       | 142/600 [03:19<10:47,  1.41s/it]
+[2024-07-18T03:03:51.465+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:50+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:51.750+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:51.763+0000] {logging_mixin.py:188} WARNING -  24%|##3       | 143/600 [03:21<11:11,  1.47s/it]
+[2024-07-18T03:03:52.919+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:51+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:53.145+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:53.146+0000] {logging_mixin.py:188} WARNING -  24%|##4       | 144/600 [03:22<10:58,  1.44s/it]
+[2024-07-18T03:03:54.314+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:53+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:54.550+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:54.552+0000] {logging_mixin.py:188} WARNING -  24%|##4       | 145/600 [03:24<10:51,  1.43s/it]
+[2024-07-18T03:03:55.779+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:54+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:56.011+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:56.013+0000] {logging_mixin.py:188} WARNING -  24%|##4       | 146/600 [03:25<10:54,  1.44s/it]
+[2024-07-18T03:03:57.169+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:56+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:57.409+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:57.411+0000] {logging_mixin.py:188} WARNING -  24%|##4       | 147/600 [03:27<10:46,  1.43s/it]
+[2024-07-18T03:03:58.570+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:57+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:03:58.813+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:03:58.815+0000] {logging_mixin.py:188} WARNING -  25%|##4       | 148/600 [03:28<10:42,  1.42s/it]
+[2024-07-18T03:03:59.994+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:03:58+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:04:00.261+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:04:00.262+0000] {logging_mixin.py:188} WARNING -  25%|##4       | 149/600 [03:30<10:44,  1.43s/it]
+[2024-07-18T03:04:01.420+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:04:00+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:04:01.678+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:04:01.679+0000] {logging_mixin.py:188} WARNING -  25%|##5       | 150/600 [03:31<10:41,  1.43s/it]
+[2024-07-18T03:04:02.863+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:04:01+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:04:03.094+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:04:03.095+0000] {logging_mixin.py:188} WARNING -  25%|##5       | 151/600 [03:32<10:38,  1.42s/it]
+[2024-07-18T03:04:04.249+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:04:03+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:04:04.490+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:04:04.492+0000] {logging_mixin.py:188} WARNING -  25%|##5       | 152/600 [03:34<10:33,  1.41s/it]
+[2024-07-18T03:04:05.689+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:04:04+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}
+[2024-07-18T03:04:05.922+0000] {bid_ask_dag.py:41} ERROR - Request to webhook returned an error 404, the response is: no_service
+[2024-07-18T03:04:05.925+0000] {logging_mixin.py:188} WARNING -  26%|##5       | 153/600 [03:35<10:34,  1.42s/it]
+[2024-07-18T03:04:07.078+0000] {bid_ask_dag.py:90} INFO - Threshold! {'orderbook_timestamp': '2024-07-18T03:04:05+00:00', 'book': 'usd_mxn', 'bid': 17.71, 'ask': 17.73, 'spread': 0.11280315848843527}

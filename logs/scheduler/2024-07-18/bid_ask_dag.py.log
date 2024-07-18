@@ -3120,3 +3120,428 @@
 [2024-07-18T02:52:08.436+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
 [2024-07-18T02:52:08.451+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:52:08.451+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-07-18T02:52:08.473+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.056 seconds
+[2024-07-18T02:52:18.578+0000] {processor.py:161} INFO - Started process (PID=3840) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:18.578+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:52:18.579+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:52:18.579+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:18.593+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:18.609+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:52:18.609+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:52:18.628+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.054 seconds
+[2024-07-18T02:52:28.738+0000] {processor.py:161} INFO - Started process (PID=3856) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:28.738+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:52:28.740+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:52:28.739+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:28.752+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:28.767+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:52:28.767+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:52:28.788+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.054 seconds
+[2024-07-18T02:52:38.870+0000] {processor.py:161} INFO - Started process (PID=3872) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:38.871+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:52:38.872+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:52:38.872+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:38.886+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:38.902+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:52:38.901+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:52:38.926+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.061 seconds
+[2024-07-18T02:52:49.008+0000] {processor.py:161} INFO - Started process (PID=3882) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:49.011+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:52:49.014+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:52:49.013+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:49.063+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:49.092+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:52:49.092+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:52:49.140+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.140 seconds
+[2024-07-18T02:52:59.358+0000] {processor.py:161} INFO - Started process (PID=3898) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:59.361+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:52:59.364+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:52:59.364+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:59.389+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:52:59.435+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:52:59.435+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:52:59.464+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.115 seconds
+[2024-07-18T02:53:09.604+0000] {processor.py:161} INFO - Started process (PID=3914) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:09.605+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:53:09.608+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:53:09.608+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:09.653+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:09.684+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:53:09.684+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:53:09.720+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.124 seconds
+[2024-07-18T02:53:19.929+0000] {processor.py:161} INFO - Started process (PID=3930) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:19.931+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:53:19.937+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:53:19.935+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:19.967+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:19.995+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:53:19.994+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:53:20.044+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.129 seconds
+[2024-07-18T02:53:30.172+0000] {processor.py:161} INFO - Started process (PID=3946) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:30.173+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:53:30.178+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:53:30.178+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:30.203+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:30.228+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:53:30.227+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:53:30.269+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.116 seconds
+[2024-07-18T02:53:40.556+0000] {processor.py:161} INFO - Started process (PID=3962) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:40.574+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:53:40.577+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:53:40.576+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:40.606+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:40.648+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:53:40.648+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:53:40.685+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.183 seconds
+[2024-07-18T02:53:50.885+0000] {processor.py:161} INFO - Started process (PID=3978) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:50.887+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:53:50.890+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:53:50.890+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:50.918+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:53:50.973+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:53:50.973+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:53:51.019+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.142 seconds
+[2024-07-18T02:54:01.163+0000] {processor.py:161} INFO - Started process (PID=3994) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:01.165+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:54:01.169+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:01.168+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:01.200+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:01.243+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:01.243+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:54:01.275+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.140 seconds
+[2024-07-18T02:54:11.358+0000] {processor.py:161} INFO - Started process (PID=4010) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:11.359+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:54:11.361+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:11.360+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:11.374+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:11.388+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:11.388+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:54:11.408+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.053 seconds
+[2024-07-18T02:54:21.484+0000] {processor.py:161} INFO - Started process (PID=4026) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:21.485+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:54:21.487+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:21.487+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:21.508+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:21.528+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:21.528+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:54:21.553+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.075 seconds
+[2024-07-18T02:54:31.653+0000] {processor.py:161} INFO - Started process (PID=4042) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:31.657+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:54:31.669+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:31.668+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:31.701+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:31.739+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:31.739+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:54:31.782+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.138 seconds
+[2024-07-18T02:54:41.862+0000] {processor.py:161} INFO - Started process (PID=4058) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:41.864+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:54:41.866+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:41.866+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:41.882+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:41.897+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:41.897+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:54:41.918+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.062 seconds
+[2024-07-18T02:54:51.992+0000] {processor.py:161} INFO - Started process (PID=4074) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:51.994+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:54:51.996+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:51.995+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:52.011+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:54:52.027+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:54:52.027+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:54:52.047+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.059 seconds
+[2024-07-18T02:55:02.202+0000] {processor.py:161} INFO - Started process (PID=4090) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:02.203+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:55:02.204+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:02.204+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:02.217+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:02.237+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:02.237+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:55:02.255+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.058 seconds
+[2024-07-18T02:55:12.325+0000] {processor.py:161} INFO - Started process (PID=4106) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:12.326+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:55:12.327+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:12.327+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:12.339+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:12.353+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:12.353+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:55:12.371+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.050 seconds
+[2024-07-18T02:55:22.437+0000] {processor.py:161} INFO - Started process (PID=4119) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:22.441+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:55:22.454+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:22.452+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:22.489+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:22.532+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:22.531+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:55:22.564+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.132 seconds
+[2024-07-18T02:55:32.739+0000] {processor.py:161} INFO - Started process (PID=4132) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:32.741+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:55:32.744+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:32.744+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:32.790+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:32.818+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:32.818+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:55:32.867+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.136 seconds
+[2024-07-18T02:55:42.989+0000] {processor.py:161} INFO - Started process (PID=4148) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:42.990+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:55:42.994+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:42.993+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:43.045+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:43.068+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:43.068+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:55:43.104+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.131 seconds
+[2024-07-18T02:55:53.218+0000] {processor.py:161} INFO - Started process (PID=4164) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:53.221+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:55:53.224+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:53.223+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:53.255+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:55:53.284+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:55:53.284+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:55:53.312+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.103 seconds
+[2024-07-18T02:56:03.440+0000] {processor.py:161} INFO - Started process (PID=4180) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:03.442+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:56:03.445+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:03.445+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:03.470+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:03.529+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:03.529+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:56:03.559+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.127 seconds
+[2024-07-18T02:56:10.618+0000] {processor.py:161} INFO - Started process (PID=4196) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:10.619+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:56:10.621+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:10.621+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:10.643+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:10.662+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:10.662+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:56:10.687+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.074 seconds
+[2024-07-18T02:56:20.789+0000] {processor.py:161} INFO - Started process (PID=4212) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:20.790+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:56:20.791+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:20.791+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:20.807+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:20.826+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:20.826+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:56:20.852+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.067 seconds
+[2024-07-18T02:56:30.936+0000] {processor.py:161} INFO - Started process (PID=4228) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:30.937+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:56:30.938+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:30.938+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:30.951+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:30.971+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:30.970+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:56:30.991+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.058 seconds
+[2024-07-18T02:56:41.053+0000] {processor.py:161} INFO - Started process (PID=4238) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:41.054+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:56:41.055+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:41.055+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:41.072+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:41.094+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:41.094+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:56:41.119+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.070 seconds
+[2024-07-18T02:56:51.219+0000] {processor.py:161} INFO - Started process (PID=4254) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:51.220+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:56:51.222+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:51.221+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:51.238+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:56:51.260+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:56:51.260+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:56:51.292+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.079 seconds
+[2024-07-18T02:57:01.481+0000] {processor.py:161} INFO - Started process (PID=4270) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:01.483+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:57:01.486+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:01.486+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:01.511+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:01.546+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:01.546+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:57:01.589+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.114 seconds
+[2024-07-18T02:57:11.701+0000] {processor.py:161} INFO - Started process (PID=4292) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:11.702+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:57:11.704+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:11.704+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:11.726+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:11.753+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:11.753+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:57:11.775+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.081 seconds
+[2024-07-18T02:57:22.052+0000] {processor.py:161} INFO - Started process (PID=4338) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:22.055+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:57:22.058+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:22.057+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:22.102+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:22.128+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:22.127+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:57:22.159+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.113 seconds
+[2024-07-18T02:57:32.433+0000] {processor.py:161} INFO - Started process (PID=4378) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:32.435+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:57:32.439+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:32.439+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:32.474+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:32.508+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:32.508+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:57:32.545+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.136 seconds
+[2024-07-18T02:57:43.063+0000] {processor.py:161} INFO - Started process (PID=4394) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:43.064+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:57:43.067+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:43.066+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:43.088+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:43.111+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:43.110+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:57:43.134+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.077 seconds
+[2024-07-18T02:57:53.226+0000] {processor.py:161} INFO - Started process (PID=4410) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:53.228+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:57:53.229+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:53.229+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:53.255+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:57:53.274+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:57:53.274+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:57:53.299+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.077 seconds
+[2024-07-18T02:58:03.391+0000] {processor.py:161} INFO - Started process (PID=4426) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:03.393+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:58:03.395+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:03.395+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:03.414+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:03.435+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:03.435+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:58:03.462+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.077 seconds
+[2024-07-18T02:58:13.624+0000] {processor.py:161} INFO - Started process (PID=4442) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:13.627+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:58:13.629+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:13.628+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:13.683+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:13.703+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:13.702+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:58:13.727+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.110 seconds
+[2024-07-18T02:58:23.894+0000] {processor.py:161} INFO - Started process (PID=4461) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:23.895+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:58:23.898+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:23.898+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:23.919+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:23.938+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:23.938+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:58:23.961+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.073 seconds
+[2024-07-18T02:58:34.064+0000] {processor.py:161} INFO - Started process (PID=4474) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:34.066+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:58:34.070+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:34.069+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:34.121+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:34.150+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:34.150+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:58:34.196+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.140 seconds
+[2024-07-18T02:58:44.292+0000] {processor.py:161} INFO - Started process (PID=4490) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:44.294+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:58:44.297+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:44.297+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:44.325+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:44.372+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:44.372+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:58:44.403+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.119 seconds
+[2024-07-18T02:58:54.544+0000] {processor.py:161} INFO - Started process (PID=4512) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:54.545+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:58:54.547+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:54.547+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:54.565+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:58:54.589+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:58:54.589+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:58:54.613+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.077 seconds
+[2024-07-18T02:59:04.803+0000] {processor.py:161} INFO - Started process (PID=4528) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:04.804+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:59:04.809+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:04.808+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:04.862+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:04.887+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:04.886+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:59:04.927+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.131 seconds
+[2024-07-18T02:59:14.999+0000] {processor.py:161} INFO - Started process (PID=4544) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:15.001+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:59:15.004+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:15.004+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:15.057+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:15.086+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:15.086+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:59:15.116+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.123 seconds
+[2024-07-18T02:59:25.163+0000] {processor.py:161} INFO - Started process (PID=4566) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:25.164+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:59:25.166+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:25.166+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:25.185+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:25.207+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:25.207+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:59:25.224+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:25.224+0000] {dag.py:3954} INFO - Setting next_dagrun for etl_ticker to 2024-07-14 05:10:00+00:00, run_after=2024-07-14 05:20:00+00:00
+[2024-07-18T02:59:25.236+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.080 seconds
+[2024-07-18T02:59:35.376+0000] {processor.py:161} INFO - Started process (PID=4582) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:35.378+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:59:35.380+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:35.380+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:35.403+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:35.426+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:35.426+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:59:35.452+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.083 seconds
+[2024-07-18T02:59:45.508+0000] {processor.py:161} INFO - Started process (PID=4598) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:45.511+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:59:45.520+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:45.519+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:45.545+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:45.568+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:45.568+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:59:45.592+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.100 seconds
+[2024-07-18T02:59:55.637+0000] {processor.py:161} INFO - Started process (PID=4615) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:55.638+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T02:59:55.640+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:55.640+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:55.656+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T02:59:55.688+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:55.687+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T02:59:55.702+0000] {logging_mixin.py:188} INFO - [2024-07-18T02:59:55.702+0000] {dag.py:3954} INFO - Setting next_dagrun for etl_ticker to 2024-07-14 05:30:00+00:00, run_after=2024-07-14 05:40:00+00:00
+[2024-07-18T02:59:55.712+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.080 seconds
+[2024-07-18T03:00:05.759+0000] {processor.py:161} INFO - Started process (PID=4639) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:05.763+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:00:05.764+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:05.763+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:05.776+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:05.792+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:05.792+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:00:05.803+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:05.803+0000] {dag.py:3954} INFO - Setting next_dagrun for etl_ticker to 2024-07-14 05:40:00+00:00, run_after=2024-07-14 05:50:00+00:00
+[2024-07-18T03:00:05.814+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.058 seconds
+[2024-07-18T03:00:15.902+0000] {processor.py:161} INFO - Started process (PID=4658) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:15.905+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:00:15.907+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:15.906+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:15.920+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:15.935+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:15.935+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:00:15.954+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.056 seconds
+[2024-07-18T03:00:26.020+0000] {processor.py:161} INFO - Started process (PID=4671) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:26.021+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:00:26.023+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:26.023+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:26.039+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:26.062+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:26.062+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:00:26.087+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.074 seconds
+[2024-07-18T03:00:36.206+0000] {processor.py:161} INFO - Started process (PID=4690) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:36.212+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:00:36.218+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:36.218+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:36.247+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:36.272+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:36.272+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:00:36.298+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.107 seconds
+[2024-07-18T03:00:46.519+0000] {processor.py:161} INFO - Started process (PID=4706) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:46.521+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:00:46.524+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:46.524+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:46.561+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:46.589+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:46.589+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:00:46.634+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.123 seconds
+[2024-07-18T03:00:56.739+0000] {processor.py:161} INFO - Started process (PID=4722) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:56.743+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:00:56.745+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:56.744+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:56.781+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:00:56.803+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:00:56.802+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:00:56.830+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.097 seconds
+[2024-07-18T03:01:06.945+0000] {processor.py:161} INFO - Started process (PID=4738) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:06.947+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:01:06.949+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:06.949+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:06.971+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:06.992+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:06.992+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:01:07.015+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.077 seconds
+[2024-07-18T03:01:17.137+0000] {processor.py:161} INFO - Started process (PID=4754) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:17.139+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:01:17.144+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:17.143+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:17.170+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:17.201+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:17.200+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:01:17.229+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.102 seconds
+[2024-07-18T03:01:27.265+0000] {processor.py:161} INFO - Started process (PID=4776) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:27.266+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:01:27.268+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:27.268+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:27.289+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:27.348+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:27.347+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:01:27.368+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:27.368+0000] {dag.py:3954} INFO - Setting next_dagrun for etl_ticker to 2024-07-14 05:50:00+00:00, run_after=2024-07-14 06:00:00+00:00
+[2024-07-18T03:01:27.381+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.122 seconds
+[2024-07-18T03:01:37.545+0000] {processor.py:161} INFO - Started process (PID=4792) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:37.546+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:01:37.549+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:37.548+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:37.574+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:37.605+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:37.605+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:01:37.652+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.114 seconds
+[2024-07-18T03:01:47.757+0000] {processor.py:161} INFO - Started process (PID=4808) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:47.758+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:01:47.761+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:47.761+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:47.779+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:47.809+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:47.809+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:01:47.836+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.083 seconds
+[2024-07-18T03:01:57.997+0000] {processor.py:161} INFO - Started process (PID=4830) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:57.998+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:01:57.999+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:57.999+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:58.012+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:01:58.026+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:58.026+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:01:58.039+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:01:58.039+0000] {dag.py:3954} INFO - Setting next_dagrun for etl_ticker to 2024-07-14 06:10:00+00:00, run_after=2024-07-14 06:20:00+00:00
+[2024-07-18T03:01:58.049+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.055 seconds
+[2024-07-18T03:02:08.191+0000] {processor.py:161} INFO - Started process (PID=4846) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:08.192+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:02:08.193+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:08.193+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:08.206+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:08.220+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:08.220+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:02:08.240+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.055 seconds
+[2024-07-18T03:02:18.349+0000] {processor.py:161} INFO - Started process (PID=4856) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:18.351+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:02:18.354+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:18.354+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:18.405+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:18.433+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:18.432+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:02:18.479+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.139 seconds
+[2024-07-18T03:02:28.586+0000] {processor.py:161} INFO - Started process (PID=4872) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:28.587+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:02:28.590+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:28.590+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:28.632+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:28.660+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:28.660+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:02:28.686+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.107 seconds
+[2024-07-18T03:02:38.850+0000] {processor.py:161} INFO - Started process (PID=4888) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:38.851+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:02:38.854+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:38.854+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:38.893+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:38.921+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:38.921+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:02:38.950+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.107 seconds
+[2024-07-18T03:02:49.045+0000] {processor.py:161} INFO - Started process (PID=4904) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:49.047+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:02:49.050+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:49.049+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:49.087+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:49.113+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:49.113+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:02:49.139+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.102 seconds
+[2024-07-18T03:02:59.289+0000] {processor.py:161} INFO - Started process (PID=4920) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:59.291+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:02:59.304+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:59.300+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:59.347+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:02:59.372+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:02:59.372+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:02:59.401+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.120 seconds
+[2024-07-18T03:03:09.449+0000] {processor.py:161} INFO - Started process (PID=4936) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:09.450+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:03:09.464+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:03:09.462+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:09.491+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:09.517+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:03:09.516+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:03:09.549+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.110 seconds
+[2024-07-18T03:03:20.077+0000] {processor.py:161} INFO - Started process (PID=4952) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:20.090+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:03:20.100+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:03:20.100+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:20.135+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:20.158+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:03:20.158+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:03:20.200+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.141 seconds
+[2024-07-18T03:03:30.239+0000] {processor.py:161} INFO - Started process (PID=4968) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:30.240+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:03:30.243+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:03:30.243+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:30.276+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:30.305+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:03:30.304+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:03:30.331+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.099 seconds
+[2024-07-18T03:03:40.374+0000] {processor.py:161} INFO - Started process (PID=4984) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:40.375+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:03:40.378+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:03:40.377+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:40.440+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:40.467+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:03:40.467+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:03:40.498+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.132 seconds
+[2024-07-18T03:03:51.223+0000] {processor.py:161} INFO - Started process (PID=5000) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:51.226+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:03:51.229+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:03:51.229+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:51.258+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:03:51.282+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:03:51.282+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:03:51.323+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.111 seconds
+[2024-07-18T03:04:01.964+0000] {processor.py:161} INFO - Started process (PID=5016) to work on /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:04:01.966+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bid_ask_dag.py for tasks to queue
+[2024-07-18T03:04:01.970+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:04:01.969+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:04:01.999+0000] {processor.py:840} INFO - DAG(s) 'etl_ticker' retrieved from /opt/airflow/dags/bid_ask_dag.py
+[2024-07-18T03:04:02.026+0000] {logging_mixin.py:188} INFO - [2024-07-18T03:04:02.026+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-18T03:04:02.081+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bid_ask_dag.py took 0.128 seconds
