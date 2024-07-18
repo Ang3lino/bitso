@@ -1,6 +1,12 @@
 alias d=docker
 alias dc=docker-compose
 
+# https://stackoverflow.com/questions/32612650/how-to-get-docker-compose-to-always-re-create-containers-from-fresh-images
+dc down 
+dc build --no-cache
+dc up airflow-init
+dc -f compose.yml up -d
+
 dc -f compose.yml up -d
 dc compose.yml down 
 
@@ -18,8 +24,18 @@ docker exec -it --user root $CONTAINER_NAME /bin/bash
 psql --host host.docker.internal -U airflow
 psql --host host.docker.internal -U airflow -d batch
 
-psql -h host.docker.internal -d batch -U airflow -p 5432 -a -q -f ./sql/db.sql
+export PGPASSWORD='airflow'
+psql -h host.docker.internal -d airflow -U airflow -p 5432 -a -q -f ./sql/drop_batch_db.sql
+psql -h host.docker.internal -d airflow -U airflow -p 5432 -a -q -f ./sql/create_db.sql
+psql -h host.docker.internal -d batch -U airflow -p 5432 -a -q -f ./sql/old_model.sql
+psql -h host.docker.internal -d batch -U airflow -p 5432 -a -q -f ./sql/copy.sql  # when using \copy the entire stmt must be in one line
 psql -h host.docker.internal -d batch -U airflow -p 5432 -a -q -f ./sql/new_model.sql
+psql -h host.docker.internal -d batch -U airflow -p 5432 -a -q -f ./sql/migration.sql
+
+psql -h host.docker.internal -d batch -U airflow -p 5432 -a -q -f ./sql/truncate.sql
+# psql -h host.docker.internal -d batch -U airflow -p 5432 -a -q -f ./sql/queries.sql
+
+
 
 pg_dump -h host.docker.internal -p 5432 -d old  -U airflow -s -F p -E UTF-8 -f ./out_schema.sql
 

@@ -1,0 +1,18 @@
+[2024-07-18T00:52:35.160+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-18T00:52:35.206+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_batch.run_query6 manual__2024-07-18T00:52:26.127306+00:00 [queued]>
+[2024-07-18T00:52:35.224+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_batch.run_query6 manual__2024-07-18T00:52:26.127306+00:00 [queued]>
+[2024-07-18T00:52:35.224+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-18T00:52:35.273+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): run_query6> on 2024-07-18 00:52:26.127306+00:00
+[2024-07-18T00:52:35.299+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1526) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-18T00:52:35.314+0000] {standard_task_runner.py:63} INFO - Started process 1541 to run task
+[2024-07-18T00:52:35.295+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'daily_batch', 'run_query6', 'manual__2024-07-18T00:52:26.127306+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/batch_dag.py', '--cfg-path', '/tmp/tmpjzliwkaf']
+[2024-07-18T00:52:35.326+0000] {standard_task_runner.py:91} INFO - Job 66: Subtask run_query6
+[2024-07-18T00:52:35.452+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_batch.run_query6 manual__2024-07-18T00:52:26.127306+00:00 [running]> on host 33967652fb43
+[2024-07-18T00:52:35.571+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='angel' AIRFLOW_CTX_DAG_ID='daily_batch' AIRFLOW_CTX_TASK_ID='run_query6' AIRFLOW_CTX_EXECUTION_DATE='2024-07-18T00:52:26.127306+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-18T00:52:26.127306+00:00'
+[2024-07-18T00:52:35.575+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-18T00:52:35.611+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-07-18T00:52:36.105+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-18T00:52:36.108+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-18T00:52:36.141+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=daily_batch, task_id=run_query6, run_id=manual__2024-07-18T00:52:26.127306+00:00, execution_date=20240718T005226, start_date=20240718T005235, end_date=20240718T005236
+[2024-07-18T00:52:36.171+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-18T00:52:36.184+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

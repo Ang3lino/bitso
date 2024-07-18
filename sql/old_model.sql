@@ -1,5 +1,4 @@
 
-
 DROP TABLE IF EXISTS deposit;
 DROP TABLE IF EXISTS event;
 DROP TABLE IF EXISTS user_id;
@@ -35,30 +34,3 @@ CREATE TABLE withdrawals (
     , currency VARCHAR(16)
     , tx_status VARCHAR(16)   
 );
-
--- Efficient insert from csv
-\COPY deposit
-    FROM '/opt/airflow/bucket/samples/deposit_sample_data.csv'
-    DELIMITER ','
-    CSV HEADER;
-
-\COPY event
-    FROM '/opt/airflow/bucket/samples/event_sample_data.csv'
-    DELIMITER ','
-    CSV HEADER;
-
-\COPY user_id
-    FROM '/opt/airflow/bucket/samples/user_id_sample_data.csv'
-    DELIMITER ','
-    CSV HEADER;
-
-\COPY withdrawals
-    FROM '/opt/airflow/bucket/samples/withdrawals_sample_data.csv'
-    DELIMITER ','
-    CSV HEADER;
-
--- Validating proper ingestion
-SELECT * FROM event LIMIT 10;
-SELECT * FROM user_id LIMIT 10;
-SELECT * FROM deposit LIMIT 10;
-SELECT * FROM withdrawals LIMIT 10;
