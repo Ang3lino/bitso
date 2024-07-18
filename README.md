@@ -33,7 +33,7 @@ docker exec -it bitso-webserver-1 bash  # get inside the container
 pytest test/test_spread_functions.py  # unit test used for this DAG
 ```
 
-Access Airflow in your web browser at `localhost:8080`. Navigate to the `etl_ticker` DAG. Use default credentials for login.
+Access Airflow in your web browser at `localhost:8080`. Navigate to the `etl_ticker` DAG. Use default credentials for login. Ensure you have authorized access to Bitso API in case of auth failure. As an easy way to find an ideal partition, it should have around 128 mb, reason why a better partition would be until day. Hour parition detail was used for testing. We could also share variables as an argument in dag definition and use of XCom.
 
 ## Challenge 2: Daily batch Streaming
 
@@ -79,7 +79,7 @@ The dag will read from source files, transform and load the rows into the new mo
 ### Considerations
 While the new data model enhances data integrity and query efficiency, potential downsides include increased computation for joins due to normalization and inheritance. However, these trade-offs are balanced against improved storage efficiency and reduced redundancy.
 
-For high-performance scenarios, denormalization and reducing constraints may be considered, depending on specific business needs, we will prefer NO SQL, database or data warehouse solution. This approach can optimize query speed at the expense of data redundancy.
+For high-performance scenarios, denormalization and reducing constraints may be considered, depending on specific business needs, we will prefer NO SQL, database or data warehouse solution. This approach can optimize query speed at the expense of data redundancy. We could have also used indexes, materialize views or tunning of distribution keys, according to the service.
 
 ### Running the Orchestration
 Similar as before, once the containers are running, the orchestration expects to have a DB called `batch` with the new ER model and the source data. We expect also to have .csv files stored in volume `bucket/samples` as we will be using postgres `COPY` command. We also need to add postgres connection. There is an `entrypoint.sh` that prepares the enviroment for our DAG: 
@@ -92,8 +92,9 @@ docker-compose -f compose.yml up -d
 docker exec -it bitso-webserver-1 bash  # get inside the container
 sh entrypoint.sh  # prepare enviroment for ingestion
 
-# optional, you can trigger the dag via CLI
-airflow dags trigger daily_batch
+pytest test/test_batch_dag.py # test batch and connection
+airflow dags trigger daily_batch # optional, you can trigger the dag via CLI
 ```
 
-The generated files will be in `bucket/batch_output`.
+The generated files will be in `bucket/batch_output`. We expect to have all CSV unzipped in `bucket/samples` mounted volume.
+
