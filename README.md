@@ -33,7 +33,10 @@ docker exec -it bitso-webserver-1 bash  # get inside the container
 pytest test/test_spread_functions.py  # unit test used for this DAG
 ```
 
-Access Airflow in your web browser at `localhost:8080`. Navigate to the `etl_ticker` DAG. Use default credentials for login. Ensure you have authorized access to Bitso API in case of auth failure. As an easy way to find an ideal partition, it should have around 128 mb, reason why a better partition would be until day. Hour parition detail was used for testing. We could also share variables as an argument in dag definition and use of XCom.
+Access Airflow in your web browser at localhost:8080. Navigate to the etl_ticker DAG. Use default credentials for login. Ensure you have authorized access to Bitso API to avoid authentication failures. Verify that the webhook is correctly configured and operational, otherwise the dag will log then webhook could not be reached. 
+
+For optimal performance and an easy rule, consider data partitions around 128 MB; daily partitions are recommended for production, while hourly partitions were used for testing. We could also use variables in defaults args dictionary for the DAG and share them with XComs.
+
 
 ## Challenge 2: Daily batch Streaming
 
